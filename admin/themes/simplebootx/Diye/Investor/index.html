@@ -1,0 +1,96 @@
+<admintpl file="header" />
+</head>
+<style>
+	.num , .current{
+		border:1px solid #6CD6BC;
+		padding:6px;
+	}
+	.form-required{
+		font-size:14px;
+	}
+	.test{
+		white-space:nowrap; 
+		overflow:hidden;
+		text-overflow: ellipsis;
+		width: 25em;
+		cursor:pointer;
+	}
+</style>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">投资者关系管理</a></li>
+		</ul>
+		<form class="js-ajax-form" action="" method="post">
+			<table class="table table-hover table-bordered table-list" style="table-layout:fixed;">
+				<thead>
+					<tr>
+						<!--<th width="2%">版本</th>-->
+						<th width="4%">标题</th>
+						<th width="3%">联系邮箱</th>
+						<th width="29%">内容</th>
+						<th width="2%"></th>
+					</tr>
+				</thead>
+				<!--<php>
+				$molds=array("1"=>"中文版","2"=>"英文版");
+				</php>-->
+				<foreach name="investorData" item="vo">
+					<tr>
+						<!--<td class="test">{$molds[$vo['investor_mold']]}</td>-->
+						<td class="test" title="{$vo.title}" class="test"><a>{$vo.title}</a></td>
+						<td class="test" title="{$vo.email}"  class="test">{$vo.email}</td>
+						<td class="test" class="test">{$vo.content}</td>
+						<td><a style="font-size:14px;" href="{:U('investor/displays',array('id'=>$vo['id']))}">查看</a>  | <a style="font-size:14px;" href="{:U('investor/edit',array('id'=>$vo['id']))}">修改</a></td>
+					</tr>
+				</foreach>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var str = 0;
+					var id = tag = '';
+					$("input[name='ids[]']").each(function() {
+						if ($(this).attr('checked')) {
+							str = 1;
+							id += tag + $(this).val();
+							tag = ',';
+						}
+					});
+					if (str == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					var $this = $(this);
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+						title : "批量移动",
+						width : "80%"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

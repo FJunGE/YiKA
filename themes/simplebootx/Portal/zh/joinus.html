@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 加入一佳</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/joinus.css">
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section>
+	<div class="banner">
+		<img class="banner-img" src="__TMPL__Public/diye/images/joinus.jpg" alt="">
+		<div class="container banner-section">
+			<h2>加入我们</h2>
+			<p>员工对于一佳是最大的资产。我们致力营造开放透明的工作环境，让团队的每一名成员都机会发挥潜能，也确保每个人的意见都获得尊重。</p>
+			<p>我们诚邀跟我们一样力求突破的您加入一佳大家庭。</p>
+			<div class="banner-btn">
+				<a href="{:U('portal/Recurit/recurit')}" class="btn btn-warning marginRight35 marginTop20">社会招聘</a>
+				<a href="{:U('portal/Campusrecruit/campusrecruit')}" class="btn btn-warning marginTop20">校园招聘</a>
+			</div>
+		</div>
+	</div>
+	<div class="container paddingBottom60 marginTop35">
+		<div class="row">
+			<div class="col-sm-10 section-text">
+				<foreach name="joindiyeData" item="vo">
+				<h1 class="section-h1 text-center">{$vo.title}</h1>
+				<hr>
+				<p>{$vo.content}</p>
+				</foreach>
+				<p>加入一佳：</p>
+				<div class="row">
+					<div class="section-list text-center col-sm-3">
+						<a href="{:U('portal/Zydevelopment/index')}"><div class="list-title"><h2>职业发展</h2></div></a>
+						<div class="list-text"><p>在这里你能充分了解一佳的职业发展规划</p></div>
+					</div>
+					<div class="section-list text-center col-sm-3">
+						<a href="{:U('portal/Campusrecruit/campusrecruit')}"><div class="list-title"><h2>校园及实习招聘</h2></div></a>
+						<div class="list-text"><p>在这里您可以了解到一佳的校园招聘及实习生岗位</p></div>
+					</div>
+					<div class="section-list text-center col-sm-3">
+						<a href="{:U('portal/professional/index')}"><div class="list-title"><h2>专业人士</h2></div></a>
+						<div class="list-text"><p>你的潜力和热情已经发挥得淋漓尽致。现在，你想深化知识，并用新工作来证明自己所具备的专业性、个人能力和国际视野，在职场生涯中更上一层楼</p></div>
+					</div>
+					<div class="section-list text-center col-sm-3">
+						<a href="{:U('portal/Recurit/recurit')}"><div class="list-title"><h2>招聘岗位</h2></div></a>
+						<div class="list-text"><p>点击查看更多正在<a href="{:U('portal/Recurit/recurit')}">招聘的岗位</a>，一佳欢迎你加入我们的大家庭</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<ul class="jyzp-ul nav padding10 mt40">
+					<li><a class="jrdy-li" href="{:U('portal/Joindiye/joinus')}">加入一佳</a></li>
+					<li><a href="{:U('portal/Zydevelopment/index')}">职业发展</a></li>
+					<li><a href="{:U('portal/Recurit/recurit')}">精英招聘</a></li>
+					<li><a href="{:U('portal/professional/index')}">专业人士</a></li>
+					<li><a href="{:U('portal/Campusrecruit/campusrecruit')}">校园招聘</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

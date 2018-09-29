@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 一佳投资基金</title>
+	<!--bootstrap-->
+    <link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/tzjj.css">
+    <script src="__TMPL__Public/diye/js/form.js" type="text/javascript"></script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<div class="tzjj container">
+	<h1 class="paddingTop20">一佳投资基金</h1>
+	<div class="row">
+		<div class="section paddingBottom60 col-sm-9">
+            <hr class="paddingBottom10">
+            <foreach name="funds" item="fo">
+				<p>{$fo.content}</p>
+	            <p class="marginTop60">联系我们：<a href="mailto:{$fo.email}">{$fo.email}</a></p>
+            </foreach>
+            <hr>
+            <form class="tzjjForm form-horizontal js-ajax-form" action="{:U('portal/Collaborate/add_collabor')}" method="POST" enctype="multipart/form-data">
+            	<div class="row">
+                    <div class="form-group">
+                        <h2 class="paddingTop10 col-sm-6 col-sm-offset-3 text-center">合作项目在线提交</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmmc" class="col-sm-3 control-label">项目名称</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="xmmc" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="zscq" class="col-sm-3 control-label">知识产权保护情况描述</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" name="zscq" rows="4" placeholder="选填"></textarea>
+                        </div>
+                        <div class="message col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmys" class="col-sm-3 control-label">项目优势</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" name="xmys" rows="3" placeholder="选填"></textarea>
+                        </div>
+                        <div class="message col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmjz" class="col-sm-3 control-label">项目竞争分析</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" name="xmjz" rows="3" placeholder="选填"></textarea>
+                        </div>
+                        <div class="message col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmyf" class="col-sm-3 control-label">项目研发/技术进度</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="xmyf" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmjs" class="col-sm-3 control-label">项目团队/个人介绍</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" name="xmjs" rows="3" placeholder="选填"></textarea>
+                        </div>
+                        <div class="message col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="yysc" class="col-sm-3 control-label">项目可应用市场</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="yysc" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmxq" class="col-sm-3 control-label">项目现阶段需求</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="xmxq" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xmxqx" class="col-sm-3 control-label">项目下阶段需求</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="xmxqx" placeholder="必填">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="tzjjName" class="col-sm-3 control-label">姓名</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="name" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-sm-3 control-label">联系方式</label>
+                        <div class="col-sm-6">
+                            <input type="text" pattern='1[0-9]{10}' title="请输入11位数正确的手机号码" maxlength="11" required="" class="form-control" name="phoneNumber" placeholder="必填">
+                        </div>
+                        <div class="message col-sm-2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="col-sm-3 control-label">资料上传</label>
+                        <div class="col-sm-6">
+                            <input type="file" required="" class="mt7" onchange="updateFiles(this)" name="file">
+                            <span class="message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" class="tzjjSubmit btn btn-warning padding10 js-ajax-submit" value="提交">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+		<!--侧边栏-->
+		<div class="sidebar col-sm-3 paddingTop10">
+        	<ul class="sidebar-ul">
+        		<li><a href="{:U('portal/Company/company')}">公司介绍</a></li>
+        		<li><a href="{:U('portal/History/history')}">发展历史</a></li>
+        		<li class="active"><a href="{:U('portal/Collaborate/index')}">一佳投资基金合作</a></li>
+        		<li><a href="{:U('portal/Idea/idea')}">一佳理念</a></li>
+        		<li><a href="{:U('portal/Research/research')}">研发与创新</a></li>
+        		<li><a href="{:U('portal/Visitor/visitor')}">媒体联系</a></li>
+        	</ul>
+		</div>
+	</div>
+</div>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

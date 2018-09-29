@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--IE采用最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--让双核浏览器默认选择 WebKit 内核渲染-->
+    <meta name="renderer" content="webkit">
+    <!--禁止百度转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!--[if IE]>
+        <script src="../js/html5shiv.min.js"></script>
+        <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <title>YIKA Window&Door</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/index.css">
+    <script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/index.js" type="text/javascript"></script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav_en" />
+<!--图片轮播-->
+<div class="container">
+    <div class="carousel slide" id="banner" data-ride="carousel">
+        <!--轮播列表-->
+        <ol class="carousel-indicators">
+            <?php if($picdata[3]['state'] == 1){?>
+                <li data-slide-to="0" class="active" data-target="#banner"></li>
+            <?php }?>
+            
+            <?php if($picdata[4]['state'] == 1){?>
+                <li data-slide-to="1" data-target="#banner"></li>
+            <?php }?>
+            
+            <?php if($picdata[5]['state'] == 1){?>
+                <li data-slide-to="2" data-target="#banner"></li>
+            <?php }?>
+            
+        </ol>
+        <!--轮播图片-->
+        <div class="carousel-inner">
+            <?php if($picdata[3]['state'] == 1){?>
+            <div class="item active">
+                <a href="/index.php?g=portal&m=article&a=index_en&id={$picdata[3]['postid']}"></a>
+                <a href="/index.php?g=portal&m=article&a=index_en&id={$picdata[3]['postid']}" target="_blank"><span class="zhezhao"></span><img src="{$picdata[3]['imgpath']}" alt=""></a>
+                <div class="item-section">
+                    <h1 class="item-title">{$picdata[3]['post_title']}</h1>
+                    <p class="pt20 pb20">{$picdata[3]['post_excerpt']}</p>
+                    <a href="index.php?g=portal&m=article&a=index_en&id={$picdata[3]['postid']}" class="carousel-btn">details</a>
+                </div>
+            </div>
+            <?php }?>
+            
+            <?php if($picdata[4]['state'] == 1){?>
+            <div class="item">
+                <a href="/index.php?g=portal&m=Article&a=index_en&id={$picdata[4]['postid']}"></a>
+                <a href="/index.php?g=portal&m=Article&a=index_en&id={$picdata[4]['postid']}" target="_blank"><span class="zhezhao"></span><img src="{$picdata[4]['imgpath']}" alt=""></a>
+                <div class="item-section">
+                    <h1 class="item-title">{$picdata[4]['post_title']}</h1>
+                    <p class="pt20 pb20">{$picdata[4]['post_excerpt']}</p>
+                    <a href="index.php?g=portal&m=Article&a=index_en&id={$picdata[4]['postid']}" class="carousel-btn">details</a>
+                </div>
+            </div>
+            <?php }?>
+            
+            <?php if($picdata[5]['state'] == 1){?>
+            <div class="item">
+                <a href="/index.php?g=portal&m=Article&a=index_en&id={$picdata[5]['postid']}"></a>
+                <a href="/index.php?g=portal&m=Article&a=index_en&id={$picdata[5]['postid']}" target="_blank"><span class="zhezhao"></span><img src="{$picdata[5]['imgpath']}" alt=""></a>
+                <div class="item-section">
+                    <h1 class="item-title">{$picdata[5]['post_title']}</h1>
+                    <p class="pt20 pb20">{$picdata[5]['post_excerpt']}</p>
+                    <a href="index.php?g=portal&m=Article&a=index_en&id={$picdata[5]['postid']}" class="carousel-btn">details</a>
+                </div>
+            </div>
+            <?php }?>
+            
+        </div>
+        <!--上下翻页按钮-->
+        <a href="#banner" class="carousel-control left" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#banner" class="carousel-control right" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<!--内容-->
+<section>
+    <div class="container">
+        <div class="section-company">
+            <div class="row padding10 mt60 marginBottom25">
+                <foreach name="companyDate" item="vo">
+                <div class="fn col-sm-6 w100">
+                    <div class="section-title">
+                        <h1 class="company-title marginTop60 marginBottom20"><a href="{:U('portal/Company/company_en')}"><span class="orange">YIKA</span> at a glance</a></h1>
+                        <p class="company-text"><a href="{:U('portal/Company/company_en')}">{$vo.abstract}</a></p>
+                    </div>
+                </div>
+                <div class="fn w100 col-sm-6">
+                    <a href="{:U('portal/Company/company_en')}"><img src="data{$vo['imgpath']}" alt="YIKA"></a>
+                </div>
+                </foreach>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 marginTop10">
+                    <a href="{:U('portal/Company/company_en')}">
+                        <h2><span class="company-span glyphicon glyphicon-home"></span>Company Induction</h2>
+                        <div class="company-text marginTop15">
+                            <foreach name="companyDate" item="zi"><p>{$zi.title}</p></foreach>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 marginTop10">
+                    <a href="{:U('portal/History/history_en')}">
+                        <h2><span class="company-span glyphicon glyphicon-time"></span>Developing History</h2>
+                        <div class="company-text marginTop15">
+                            <foreach name="histdata" item="po"><span>in{$po.year} {$po.content}</span></foreach>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 marginTop10">
+                    <a href="{:U('portal/Collaborate/index_en')}">
+                        <h2><span class="company-span glyphicon glyphicon-yen"></span>YIKA Investment Fund(EFI)</h2>
+                        <div class="company-text marginTop15">
+                            <foreach name="funds" item="fo"><p>{$fo.introduce}</p></foreach>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--新闻中心-->
+        <div id="news" class="section-industry">
+            <ul class="pull-right">
+                <li class="news-btn news-btn-left glyphicon glyphicon-menu-left"></li>
+                <li class="news-btn news-btn-right glyphicon glyphicon-menu-right"></li>
+            </ul>
+            <div class="section-title">             
+                <h1 class="marginTop60"><a href="{:U('portal/index/news_en')}">Latest news</a></h1>
+            </div>
+            <div class="industry-content">
+                <div class="industry-img clearfix">
+                    <foreach name="information" item="vo">
+                        <div class="industry-img-content">
+                            <a href="index.php?g=portal&m=article&a=index_en&id={$vo.id}">
+                                <img src="{$vo['smeta']}" alt="">
+                                <div class="industry-article">
+                                    <h2>{$vo.post_title}</h2>
+                                    <p>{$vo.post_excerpt}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </foreach>
+                </div>
+            </div>
+        </div>
+        <hr class="marginTop35">
+        <!--解决方案-->
+        <div class="section-industry paddingBottom60" id="industry">
+            <ul class="pull-right">
+                <li class="industry-btn industry-left glyphicon glyphicon-menu-left"></li>
+                <li class="industry-btn industry-right glyphicon glyphicon-menu-right"></li>
+            </ul>
+            <div class="section-title">             
+                <a href="javascript:;"><h1 class="marginTop60">Products</h1></a>
+            </div>
+            <div class="industry-content">
+                <div class="industry-img clearfix">
+                    <foreach name="plandata" item="jk">
+                    <div class="industry-img-content">
+                        <a href="index.php?g=portal&m=Plan&a=detail_en&id={$jk.id}">
+                            <img src="data/{$jk.picpath}" alt="">
+                            <div class="industry-article text-center">
+                                <h2>{$jk.title}</h2>
+                                <div class="jjfa-text">
+                                    <p>{$jk.plan_content}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    </foreach>
+                </div>
+            </div>
+        </div>
+        <!--<hr class="marginBottom60">
+        	 招聘信息
+        <div class="recruit row marginBottom60"> -->
+            <!-- 招聘信息
+            <div class="col-sm-4">
+                <h3 class="marginBottom20">Job Search</h3>
+                <div class="recruit-textBg clearfix">EmpireChem offers an incredible number of ways to enter the company and employment experts and professionals in a wide range of areas.</div>
+                <div class="marginTop35 clearfix marginBottom20">
+                    <a class="recruit-btn btn btn-warning mr15" href="{:U('portal/recurit/recurit_en')}">Society Recruitment</a>
+                    <a class="recruit-btn btn btn-warning" href="{:U('portal/campusrecruit/campusrecruit_en')}">Campus Internships</a>
+                </div>
+            </div> -->
+            <!-- 招聘表格
+            <div class="col-sm-8">
+                <div class="col-sm-6">
+                    <div class="table-responsive border0">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Society Recruitment</th>
+                                    <th class="text-right"><a href="{:U('portal/recurit/recurit_en')}">more</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="newRecurit" item="ao" >
+                                    <tr data-toggle='modal' data-target='#avc{$ao.id}'>
+                                        <td>{$ao.name}</td>
+                                        <td class="text-right">
+                                            {$ao.createtime}
+                                        </td>
+                                    </tr>
+                                </foreach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="table-responsive border0">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Campus Internships</th>
+                                    <th class="text-right"><a href="{:U('portal/campusrecruit/campusrecruit_en')}">more</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="newCampusrecruit" item="no" >
+                                    <tr data-toggle='modal' data-target='#as{$no.id}'>
+                                        <td>{$no.name}</td>
+                                        <td class="text-right">
+                                            {$no.createtime}
+                                        </td>
+                                    </tr>
+                                </foreach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                 -->
+                <!-- 弹窗 
+                <foreach name="newRecurit" item="ho">
+                    <div class="modal fade" id="avc{$ho.id}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</pan><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">{$ho.name}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row paddingTop10">
+                                            <div class="col-sm-6 paddingBottom10">Types：{$ho.model}</div>
+                                            <div class="col-sm-6 paddingBottom10">Location：{$ho.origin}</div>
+                                            <div class="col-sm-6 paddingBottom10">Valid from：{$ho.createtime}</div>
+                                            <div class="col-sm-6 paddingBottom10">Benefits：{$ho.pay}</div>
+                                        </div>
+                                        <h2>Duty:</h2>
+                                        <p>{$ho.responsibilities}</p>
+                                        <h2>require:</h2>
+                                        <p>{$ho.require}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="{:U('portal/Recurit/add_recurit')}" method="POST" class="text-left" enctype="multipart/form-data">
+                                            <input type="hidden" name="id" value="{$ho.id}" />
+                                            <div class="clearfix">
+                                                <label for="file" class="pull-left">biodata：</label>
+                                                <input type="file" onchange="updateFiles(this)" name="file" required="" class="pull-left">
+                                            </div>
+                                            <p class="message">Please send your resume and upload named, only upload rar, zip, 7z file format.</p>
+                                            <input type="submit" class="pull-right btn btn-warning" value="Delivery resume">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                    -->
+                <!-- 弹窗2 
+                <foreach name="newCampusrecruit" item="ko">
+                    <div class="modal fade" id="as{$ko.id}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</pan><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">{$ko.name}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row paddingTop10">
+                                            <div class="col-sm-6 paddingBottom10">Types：{$ko.model}</div>
+                                            <div class="col-sm-6 paddingBottom10">Location：{$ko.origin}</div>
+                                            <div class="col-sm-6 paddingBottom10">Valid from：{$ko.createtime}</div>
+                                            <div class="col-sm-6 paddingBottom10">Benefits：{$ko.pay}</div>
+                                        </div>
+                                        <h2>Duty:</h2>
+                                        <p>{$ko.responsibilities}</p>
+                                        <h2>require:</h2>
+                                        <p>{$ko.require}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="{:U('portal/Recurit/add_recurit')}" method="POST" class="text-left" enctype="multipart/form-data">
+                                            <input type="hidden" name="id" value="{$ko.id}" />
+                                            <div class="clearfix">
+                                                <label for="file" class="pull-left">biodata：</label>
+                                                <input type="file" onchange="updateFiles(this)" name="file" required="" class="pull-left">
+                                            </div>
+                                            <p class="message">Please send your resume and upload named, only upload rar, zip, 7z file format.</p>
+                                            <input type="submit" class="pull-right btn btn-warning" value="Delivery resume">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                    
+            </div>
+            
+        </div>-->
+    </div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1_en" />
+</body>
+</html>

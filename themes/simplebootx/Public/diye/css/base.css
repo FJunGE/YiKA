@@ -1,0 +1,159 @@
+body{ margin-top:70px; }
+nav{font-family:"微软雅黑";}
+.glyphicon:before{vertical-align:text-bottom;}
+.section-h1{ padding:5px; margin:25px 0 15px; font-size:28px; }
+.bg{ background-color:#f5f5f5; font-family:"微软雅黑"; }
+#navbar-collapse li a{ color:#505050; }
+.message{color:red}
+.headIcon{ width:30px; height:30px; }
+footer a:hover { color: #75BD2A; }
+
+/*页头样式2.0*/
+li.user{ float: left; position: relative; }
+li.language{ float: right !important; }
+li.language a{ line-height: 30px; padding-left: 15px; padding-right: 15px; }
+li.language a:hover{ background-color: none !important; color: #75BD2A !important; }
+li.language i:before{ padding-right: 4px; font-size: 18px; }
+#navbar-collapse .userList li a{ padding: 10px 20px; }
+#navbar-collapse .userList li a:hover{ color: #75BD2A !important; background-color: transparent; }
+#navbar-collapse li.spacer{ float: left; height: 22px; margin: 23px 6px 0; width: 1px; background: #ccc; }
+.nav-title{ font-size:14px; margin:0; padding-top:10px; margin-bottom:10px; }
+@media (max-width: 767px){
+  .navbar-header a.btn-link{ background-color:#e60012 !important; }
+  #navbar-collapse-ul > .dropdown > a{  background-color:#f8f8f8; color:#727272; border-bottom:1px solid #eaeaea; }
+  #navbar-collapse-ul .caret{ float:right; margin-top:5px; }
+  .nava{ box-shadow:0px 0px 1px 1px #ccc; }
+  .icon-bar{ background-color:white !important; }
+  .btnone{border-top:none !important;}
+  .nav-ul{ position:absolute; right:-110%; top:0; width:110%; background-color:white; display:none; }
+  .nav-title{ border-top:1px dashed #ccc; }
+  .nav-title{ background:url('../images/navIcon.png') no-repeat 100% 80%; }
+  .db{ display:block !important; }
+  .db:before{ content: '返回上层'; color:#727272; background: #f1f1f1 url('../images/reback.png') no-repeat 10px; padding:10px 0 10px 30px; display:block; margin-bottom: 10px; }
+  .db.en:before{ content: "Back"; }
+  .nav-ul li{ padding-left:10px !important; padding-right:10px !important; }
+  .nav-ul a{ display:block; border-bottom:1px dashed #ccc; padding-left:21px; }
+  .nav-ul li:last-child a{ border-bottom:0; }
+  .navbar-xs{ position: relative; right:0; transition:all 0.5s; -webkit-transition:all 0.5s; }
+  .navbar-xs-overflow{overflow: hidden}
+  .navbar-xs-right{ right: 100%; margin-right: 15px; }
+  /*页脚响应*/
+  .footer-gzwm{text-align:left}
+  .footer-ul .col-sm-6{padding-left:0}
+  #navbar-collapse li.spacer{ display: none; }
+}
+.positionStatic{ position:static !important; }
+.navbar-collapse .navbar-nav .dropdown-menu li a{ padding-top:6px; padding-bottom:6px; }
+.z1{z-index:1;}
+.caret{ transition:transform 0.4s; -webkit-transition:-webkit-transform 0.4s; border-width:5px; }
+.open .caret{ transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); }
+@media (min-width: 768px){
+  #navbar-collapse>.navbar-nav>li>a{ padding-top:25px; padding-bottom:25px; }
+  .nav-product-ul li{ float:left; width: 33%; }
+  .nav-product-ul a{ display:block; width:130px; }
+  .nav-product-ul.en a{ width: auto; padding: 20px; padding-left: 0; display: block; }
+  .nav-title{ font-size:16px; padding-bottom:10px; border-bottom:1px solid #009B3B; border-top:1px solid #009B3B; color: #009B3B; }
+  .mg10{margin:10px 0}
+  .p20{padding:20px}
+  .pr{position:relative;}
+  .fr{float:right}
+  .mt15{margin-top:15px !important;}
+  .nava{ position:absolute; width:200%; background-color:white; padding-left:50%; padding-right:50%; margin-left:-50%; left:0; top:70px; }
+  .nava a{ color:#333 !important; }
+  .nav-ul a{ display:inline-block; }
+  .nav-title-icon:before{content: "\e258";padding-left:1px; font-size:16px;}
+}
+
+/*页头样式*/
+.navbar{ background-color:#fff; }
+.icon-bar{ background-color:#ccc; }
+.navbar-toggle{ margin-top:12px; margin-bottom:12px; }
+.navbar-header a.btn-link{ background:#eee; }
+.navbar-inner{ box-shadow:0 1px #F3F3F3; }
+li.login{display:none}
+li.user > a{padding:20px 5px}
+li.user > a:hover,li.user > a:focus,li.user > a{ background-color:transparent; }
+li.user li a{ color:#999999; }
+.f12{font-size:12px}
+.border0{border:0}
+.borderRadius0{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;}
+.marginTB18{margin-top:18px;margin-bottom:18px;}
+.margin0{margin:0}
+.marginTop10{margin-top:10px}
+.marginTop15{margin-top:15px}
+.marginTop20{margin-top:20px}
+.marginTop35{margin-top:35px}
+.marginTop60{margin-top:60px}
+.marginRight10{margin-right:10px}
+.marginRight35{margin-right:35px}
+.marginBottom20{margin-bottom:20px}
+.marginBottom40{margin-bottom:40px}
+.marginBottom60{margin-bottom:60px}
+.outlineNone{outline:none}
+.marginTop0{margin-top:0}
+.padding0{padding:0 !important}
+.padding5{padding:5px}
+.padding10{padding:10px}
+.paddingTop10{padding-top:10px}
+.paddingTop20{padding-top:20px}
+.paddingTop40{padding-top:40px}
+.paddingBottom40{padding-bottom:40px}
+.paddingBottom10{padding-bottom:10px}
+.paddingBottom20{padding-bottom:20px}
+.paddingBottom60{padding-bottom:60px}
+.paddingBottom80{padding-bottom:80px}
+.marginBottom0{margin-bottom:0}
+.lineheight34{line-height:34px}
+.lineheight38{line-height:38px}
+.plpr15{padding-left:15px;padding-right:15px;}
+.jyzp-ul li a{ color:#153148; }
+/*页脚样式*/
+footer{ background-color:#F5F5F5; }
+footer a,footer{ color:#777777; font-family:"微软雅黑"; }
+ul{ margin:0; padding:0; list-style:none; }
+.footer-ul a{ line-height:200%; }
+.footer-ul img{ width:100%; }
+.f18{ font-size:18px; }
+.marginBottom25{margin-bottom:25px}
+@media (max-width:767px){
+  .footer-h1,.footer-ul{ text-align:center; }
+  .footer-h1:after{ content:''; background: url('../images/footerIcon.png') no-repeat center; padding-left:17px; }
+  .footer-ul{ display:none; }
+}
+.pages a,
+.pages span {
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 0 1px;
+  border: 1px solid #f0f0f0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.pages a,
+.pages li {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(0,155,59);
+}
+
+.pages a.first,
+.pages a.prev,
+.pages a.next,
+.pages a.end {
+  margin: 0;
+}
+
+.pages a:hover {
+  border-color: rgb(129,193,32);
+}
+
+.pages span.current {
+  /*background: #50A8E6;*/
+  background: rgb(129,193,32);
+  color: #FFF;
+  font-weight: 700;
+  border-color: rgb(0,155,59);
+}

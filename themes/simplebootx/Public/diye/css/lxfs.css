@@ -1,0 +1,21 @@
+/* 联系方式 */
+.breadcrumb{ padding-left:0; background-color:white; }
+#map{ height:350px; }
+@media (max-width:767px){
+	#map{ height:250px; }
+}
+.lxwm-ul{ margin-bottom:10px; }
+/* 法律声明 */
+.flsm p{ font-size:12px; line-height:240%; }
+.flsm h2{ font-family:'微软雅黑'; font-size:1.23em; border-left: 4px solid #db6b6a; padding-left: 5px; }
+#tab-flsm{ margin-top:10px; }
+#tab-flsm li{ float:left; width:33.33%; text-align:center; }
+@media (max-width:465px){
+	#tab-flsm li{ width:auto; font-size:12px; }
+}
+@media (min-width:767px){
+   	#tab-flsm li a{ font:1.23em 微软雅黑; }
+   	.flsm .tab-pane{ min-height:300px; }
+}
+#tab-flsm li a{ color:#555; padding:10px 9px; }
+#tab-flsm li.active a{ border-bottom:1px solid #db6b6a; color:#db6b6a; background-color:#eeeeee; }

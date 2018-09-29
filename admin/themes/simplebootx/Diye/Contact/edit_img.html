@@ -1,0 +1,85 @@
+<admintpl file="header" />
+<style type="text/css">
+.pic-list li {
+	margin-bottom: 5px;
+}
+.form-required{
+	color:red;
+	font-weight:blod;
+}
+.edui-default .edui-editor{
+	display:none;
+}
+</style>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Contact/index')}">联系我们</a></li>
+			<li class="active"><a href="#">修改地址信息</a></li>
+		</ul>
+		<form action="{:U('Contact/edit_image')}" method="post" class="form-horizontal js-ajax-forms" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="{$data.id}" />
+			<div class="row-fluid">
+				<div class="span9">
+					<table class="table table-bordered">
+						<tr>
+							<th><img alt="" src="data/{$data.imgsrc}" WIDTH="380" HEIGHT="200"></th>
+							<td>
+								<input name="imgsrc" type="file">
+								<span class="form-required"><font color="red">* 只可上传 jpge jpg png gif 图片</font></span><br/>&nbsp;&nbsp;&nbsp;
+								<span>{$data['imgsrc'] !='' ? '图片已经上传，重新上传替换覆盖' : '图片未上传'}</span>&nbsp;&nbsp;&nbsp;<a target="blank" href="{$data['imgsrc']}">查看</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<button class="btn btn-primary js-ajax-submit" type="submit">更新</button>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var str = 0;
+					var id = tag = '';
+					$("input[name='ids[]']").each(function() {
+						if ($(this).attr('checked')) {
+							str = 1;
+							id += tag + $(this).val();
+							tag = ',';
+						}
+					});
+					if (str == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					var $this = $(this);
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+						title : "批量移动",
+						width : "80%"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

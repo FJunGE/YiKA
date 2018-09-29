@@ -1,0 +1,66 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed">
+	<input type="text" value="{$time}" style="display:none;">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Indexadmin/index')}">本站用户</a></li>
+			<li class="active"><a href="javascript:;">详情</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal" action="{:U('Indexadin/add_plan')}" enctype="multipart/form-data" 
+			method="post" onsubmit="return checkFiles()">
+			<php>$sex=array("0"=>'女',"1"=>'男');</php>
+				<table border="1">
+						<tr>
+							<th>账号</th>
+							<td><input type="text" name="title" value="{$user.user_login}"  ></td>
+						</tr>
+						<tr>
+							<th>称呼</th>
+							<td><input type="text" name="title" value="{$sex[$user['sex']]}"  ></td>
+						</tr>
+						<tr>
+							<th>姓名</th>
+							<td><input type="text" name="title" value="{$user.user_nicename}"  ></td>
+						</tr>
+						<tr>
+							<th>手机号码</th>
+							<td><input type="text" name="title" value="{$user.mobile}"  ></td>
+						</tr>
+						<tr>
+							<th>邮箱</th>
+							<td><input type="text" name="title" value="{$user.user_email}"  ></td>
+						</tr>
+						<tr>
+							<th>区域</th>
+							<td><input type="text" name="title" value="{$user.area}"  ></td>
+						</tr>
+						<tr>
+							<th>公司名称</th>
+							<td><input type="text" name="title" value="{$user.company}"  ></td>
+						</tr>
+						<tr>
+							<th>部门</th>
+							<td><input type="text" name="title" value="{$user.department}"  ></td>
+						</tr>
+				</table>
+				<input type="hidden" value="edit" name="op"/>
+				<input type="hidden" value="{$plan.id}" name="id"/>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.min.js"></script>
+</body>
+<script type="text/javascript">
+	editorcontent = new baidu.editor.ui.Editor();
+	editorcontent.render('pro_content');
+	
+
+	editorcontent1 = new baidu.editor.ui.Editor();
+	editorcontent1.render('plan_content');
+	
+</script>
+</html>

@@ -1,0 +1,14 @@
+[ 2018-09-26T23:14:47+08:00 ] 192.168.1.100 /index.php?g=Admin&m=setting&a=site_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `dy_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dy_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dy_options` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `dy_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `dy_options` SET `option_id`='2',`option_name`='site_options',`option_value`='{\"site_name\":\"\\u4e00\\u4f73\\u95e8\\u7a97\\u540e\\u53f0\\u7ba1\\u7406\\u7cfb\\u7edf\",\"site_host\":\"http:\\/\\/www.diyecmf.com:7474\\/\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"site_adminstyle\":\"bluesky\",\"site_icp\":\"\\u6caaICP\\u590715055031\\u53f7-1\",\"site_admin_email\":\"1511022667@163.com\",\"site_admin_telephone\":\"400-15120\",\"site_admin_english_telephone\":\"02-123456\",\"site_tongji\":\"\",\"site_copyright\":\"\\u6caaICP\\u590715055031\\u53f7-1\",\"site_seo_title\":\"\\u5e1d\\u4e1a\\u5316\\u5b66\",\"site_seo_keywords\":\"\\u5e1d\\u4e1a\\u5316\\u5b66\",\"site_seo_description\":\"\\u5e1d\\u4e1a\\u5316\\u5b66\",\"urlmode\":\"0\",\"html_suffix\":\"\",\"comment_time_interval\":60}' WHERE ( option_name='site_options' ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dy_options` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `dy_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `dy_options` SET `option_name`='cmf_settings',`option_value`='{\"banned_usernames\":\"\"}' WHERE ( option_name='cmf_settings' ) [ RunTime:0.0002s ]
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 职业发展</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/kcxfz.css">
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section>
+	<div class="banner">
+		<div class="content">
+			<div class="container">
+				<h1>职业发展</h1>
+				<p>员工是一佳最重要的资产，更是一佳最重要的投资事项。每位员工都与一佳共同成长、创造价值。<br>回馈一佳员工，提供优质待遇、培训机制及真诚的关怀;为员工不断建立上升通道，通过奋斗为员工建立长期保障。</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="zyfz-content zyfz-top clearfix mt40">
+					<foreach  name="zydeveData" item="xo">
+						<div class="zyfz-section">
+							<div class="zyfz-title">{$xo.title}</div>
+							<div class="zyfz-text">
+								<p>{$xo.content}</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+				<hr class="marginTop60 paddingBottom20">
+				<div class="zyfz-tsrc text-center marginBottom40">
+					<foreach name="zydeveDatb" item="vo">
+						<div class="zyfz-h1">{$vo.title}</div>
+						<p>{$vo.content}</p>
+					</foreach>
+				</div>
+				<div class="zyfz-content clearfix marginBottom60">
+					<foreach  name="zydeveDatc" item="co">
+						<div class="zyfz-section">
+							<div class="zyfz-title">{$co.title}</div>
+							<div class="zyfz-text">
+								<p>{$co.content}</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<ul class="jyzp-ul nav padding10 mt40">
+					<li><a href="{:U('portal/Joindiye/joinus')}">加入一佳</a></li>
+					<li><a class="zyfz-li" href="{:U('portal/Zydevelopment/index')}">职业发展</a></li>
+					<li><a href="{:U('portal/Recurit/recurit')}">精英招聘</a></li>
+					<li><a href="{:U('portal/professional/index')}">专业人士</a></li>
+					<li><a href="{:U('portal/Campusrecruit/campusrecruit')}">校园招聘</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

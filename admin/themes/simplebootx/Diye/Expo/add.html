@@ -1,0 +1,125 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed">
+	<input type="text" value="{$time}" style="display:none;">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Expo/index')}">展会管理</a></li>
+			<li class="active"><a href="{:U('Expo/add_store')}">新增展会</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal" action="{:U('Expo/add_expo')}" enctype="multipart/form-data" 
+			method="post" onsubmit="return checkFiles()">
+				<table border="1">
+						<tr>
+							<th width="80">关联新闻</th>
+							<td>
+								<select multiple="multiple" style="max-height: 100px;" name="newsid[]">
+									<foreach name="news" item="vo"> 
+										<option value="{$vo['id']}">{$vo['post_title']}</option>
+									</foreach>	
+								</select>
+								<div>windows：按住 Ctrl 按钮来选择多个选项,Mac：按住 command 按钮来选择多个选项</div>
+							</td>
+						</tr>
+						<tr>
+							<th>展会标题</th>
+							<td><input type="text" name="title"></td>
+						</tr>
+						<tr>
+							<th>展会地址</th>
+							<td><input type="text" name="address"></td>
+						</tr>
+						<tr>
+							<th>展会时间</th>
+							<td><input type="text" name="expotime"></td>
+						</tr>
+						<tr>
+							<th>展会状态</th>
+							<td>
+								<lable><input type="radio" name="state" value="1" checked="checked"> 发布 </lable>&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="radio" name="state" value="0"> 不发布  </lable>	
+							</td>
+						</tr>
+						<tr>
+							<th>内容</th>
+							<td>
+								<script type="text/plain" id="content" name="content"></script>
+							</td>
+						</tr>
+					<tbody>
+						<tr>
+							<th>请选择展台图片</th>
+							<td><input id="avatar_uploder1" type="file" name="photo[]"></td>
+						</tr>
+					</tbody>
+					
+					<tr>
+						<td ><input type="button" class="btn" value="新增上传栏" onclick="addItem()"/></td>
+						<td ><input type="submit" class="btn btn-primary J_ajax_submit_btn"  value="提交"/></td>
+					</tr>
+				</table>
+					<div class="uploaded_avatar_area">
+						<div id="cmi" class="uploaded_avatar_btns">
+							
+							
+							
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.min.js"></script>
+</body>
+<script type="text/javascript">
+	editorcontent = new baidu.editor.ui.Editor();
+	editorcontent.render('content');
+	function addItem(){
+		
+		var tr = document.createElement("tr");
+		var th = document.createElement("th");
+		var td = document.createElement("td");
+		
+		th.innerHTML = "请选择文件";
+		
+		var fInput = document.createElement("input");
+		fInput.setAttribute("type","file");
+		fInput.setAttribute("name","photo[]")
+		
+		var dInput = document.createElement("input");
+		dInput.setAttribute("type","button");
+		dInput.setAttribute("value","删除");
+		dInput.setAttribute("onclick","delItem(this)");
+		
+		td.appendChild(fInput);
+		td.appendChild(dInput);
+		
+		tr.appendChild(th);
+		tr.appendChild(td);
+		
+		var tbody = document.getElementsByTagName("tbody")[0];
+  		tbody.appendChild(tr);
+	}
+	
+	function delItem(btn){
+				//拿到tr节点,是button的祖父节点
+				var tr = btn.parentNode.parentNode;
+				var tbody = document.getElementsByTagName("tbody")[0];
+				tbody.removeChild(tr);
+		}
+	
+	function checkFiles(){
+			var fileList = document.getElementsByName("photo[]");
+			for(var i=0;i<fileList.length;i++){
+				//该file组件没有选文件
+				if(fileList[i].value==null || fileList[i].value==""){
+					alert("您的第"+(i+1)+"张图片文件还没有选择！！！");
+					return false;
+				}
+			}
+			return true;
+		}
+</script>
+</html>

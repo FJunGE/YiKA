@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 采购</title>
+	<!--bootstrap-->
+    <link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/txt.css">
+    <script src="__TMPL__Public/diye/js/form.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/page.js" type="text/javascript"></script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section>
+	<div class="container txt-page2 paddingBottom60 paddingTop10">
+    	<!--路径导航-->
+        <ol class="breadcrumb lujingnav">
+            <li><a href="index.php?g=portal&m=index&a=index">首页</a></li>
+            <li class="active">采购</li>
+    	</ol>
+        <h2>采购</h2>
+        <hr>
+      	<!--<p>我们的采购活动几乎涵盖了一佳产品制造及服务所需要的一切：原材料、技术产品和服务以及物流解决方案。 我们与具有竞争力的供应商合作，为一佳和客户创造更高价值。</p>
+        <h3>一佳对供应商和承包商的期望</h3>
+        <p>经济竞争力：以优质产品和服务帮助一佳为客户创造更高价值</p>
+        <p>环境保护：负责任地利用资源，减少废物和对大气、水体和土壤的排放</p>
+		<p>全面安全：工人和公众提供完善保护，免受对产品的固有风险。</p>
+		<p>公平工作环境：确保员工的最低工资、合理工时和结社自由</p>
+		<p>合理治理：杜绝卡特尔垄断、腐败、收受贿赂和洗钱等一切非法行为</p>-->
+		<foreach name="res" item="ao">
+			<p>{$ao.introduce}</p>
+			<h3>{$ao.title}</h3>
+			<p>{$ao.content}</p>
+		</foreach>
+	    <div class="row padding0 marginTop35 text-center">
+			<div class="col-xs-12 col-md-4">
+				<div class="highlight">
+					<p>了解近期采购及招标信息</p>
+					<p>已经是一佳的正式供应商：</p>
+					<p><a href="{:U('portal/Bidding/guide')}">供应商商业行为指南</a></p>
+					<p><a href="{:U('portal/Bidding/criterion')}">采购业务行为准则</a></p>
+					<p><a href="{:U('portal/Bidding/statement')}">feedback一佳采购免责声明</a></p>
+				</div>
+				<a href="{:U('portal/user/login')}" class="btn btn-primary btn-block" role="button">供应商登陆</a>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="highlight">
+					<p>希望成为一佳潜在供应商，与一佳携手共进？</p>
+					<p>请登记您的公司信息：</p>
+				</div>
+				<a href="javascript:;" id="purchase-dj" class="btn btn-primary btn-block" role="button">登记</a>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="highlight">
+					<p>您我共建透明、公正、廉洁的商业行为</p>
+				</div>	
+				<a href="{:U('portal/Feedback/feedback')}" class="btn btn-primary btn-block" role="button">投诉与反馈</a>
+			</div>
+	    </div>
+	    <hr id="gysdj">
+	    <div class="gys">
+            <h2 class="text-center">潜在供应商登记</h2>
+    	    <form class="form-horizontal js-ajax-form" action="{:U('portal/Purchase/add_user')}" method="POST" enctype="multipart/form-data">
+               	<div class="row padding0 marginTop35">
+                   	<div class="form-group">
+                        <label for="companyName" class="col-sm-3 control-label">公司名称</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="companyName" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-sm-3 control-label">通讯地址</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="address" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fax" class="col-sm-3 control-label">公司总部电话</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="fax" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-sm-3 control-label">公司总部传真</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="tel" placeholder="选填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time" class="col-sm-3 control-label">公司成立时间</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="time" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="capital" class="col-sm-3 control-label">注册资金</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="capital" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+    				<label for="listed" class="col-sm-3 control-label">是否上市</label>
+    				<div class="col-sm-6 tl">
+    					<label class="radio checkbox-inline">
+    				      <input type="radio" name="listed" name="yes" 
+    				         value="1" checked> 是
+    				   </label>
+    				   <label class="radio checkbox-inline">
+    				      <input type="radio" name="listed" name="no" 
+    				         value="2"> 否
+    				   </label>					
+    				</div>
+    			</div>
+                    <div class="form-group">
+                        <label for="website" class="col-sm-3 control-label">公司网站</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="website" placeholder="请输入公司网站，域名开头完整网站地址，如：www.baidu.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberCount" class="col-sm-3 control-label">公司总人数</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="numberCount" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminCount" class="col-sm-3 control-label">管理及技术人数</label>
+                        <div class="col-sm-6">
+                            <input type="text" required="" class="form-control" name="adminCount" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact" class="col-sm-3 control-label">业务联系人及电话</label>
+                        <div class="col-sm-6">
+                            <input type="text" pattern='1[0-9]{10}' title="请输入11位数正确的手机号码" maxlength="11" required="" class="form-control" name="contact" placeholder="必填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyIntroduction" class="col-sm-3 control-label">公司简介</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" name="companyIntroduction" rows="4" placeholder="选填"></textarea>
+                        </div>
+                        <div class="message col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product" class="col-sm-3 control-label">服务及产品</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="product" placeholder="选填">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">资料上传</label>
+                        <div class="col-sm-6">
+                        	<input type="file" class="file" required="" onchange="updateFiles(this)" name="file">
+                            <span class="message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    	<div class="col-sm-6 col-sm-offset-3">
+                    		<input type="submit" class="tzjjSubmit btn btn-warning padding10 js-ajax-submit" value="提交">
+                    	</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+  </div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

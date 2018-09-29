@@ -1,0 +1,55 @@
+<admintpl file="header" />
+</head>
+<style>
+	.num , .current{
+		border:1px solid #6CD6BC;
+		padding:6px;
+	}
+	.pagination{
+		margin:0 auto;
+		width:500px;
+		margin-top:10px;
+	}
+</style>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Category/index')}">分类管理</a></li>
+			<li><a href="{:U('Category/add')}">添加分类</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" action="{:U('Category/listorders')}">
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="50">ID</th>
+						<th>分类名称</th>
+						<th>分类描述</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<foreach name="data" item="vo">
+					<tr>
+						<th>{$vo['id']}</th>
+						<th>{$vo['name']}</th>
+						<th>{$vo['description']}</th>
+						<th><a href="{:U('Category/edit',array('id'=>$vo['id']))}">修改</a> | <a class="js-ajax-delete" href="{:U('Category/delete',array('id'=>$vo['id']))}">删除</a></th>
+					</tr>
+					</foreach>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th width="50">ID</th>
+						<th>分类名称</th>
+						<th>分类描述</th>
+						<th>操作</th>
+					</tr>
+				</tfoot>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

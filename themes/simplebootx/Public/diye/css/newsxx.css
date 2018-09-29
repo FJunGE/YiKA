@@ -1,0 +1,42 @@
+.newsCon{ font-family:"微软雅黑"; }
+.newsCon .row h1{ padding:0 15px; margin:5px 0 10px; font-size:28px; }
+.newsCon ol,.jjfa .breadcrumb{ background-color:white; padding-left:0; }
+.newsSection p{ line-height:180%; margin-bottom:0px; letter-spacing:1px; text-indent:2em; }
+.time{ display:block; margin-bottom:10px; padding-left:1px; color:#cdcdcd; padding-bottom:10px; }
+.newsSidebar-title{ font-size:20px; padding-bottom:9px; margin-bottom:10px; }
+.borderC{ border-bottom:1px solid #cdcdcd; }
+.sidebar-news li{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:10px 0; }
+.sidebar-news span{ font-weight:bold; padding:0px 5px; margin-right:5px; background-color:#999999; color:white; }
+.top3{ background-color:#ffac19 !important; }
+
+@media (max-width:767px){
+	.newsSidebar{ display:none; }
+}
+
+/*行业解决方案*/
+.jjfa img{ width:100%; }
+.jjfa-h1,.jjfa-h2,.jjfa-h3{ font-family:"微软雅黑"; }
+.jjfa-h1{ font-size:32px; }
+.jjfa-text p,.solutions-name p{ color:#444; }
+.solutions-shop{ position:relative; }
+.jjfa-h2{ font:16px '宋体'; background-color:white; position:absolute; top:-35px; left:-1px; padding:8px 15px; border:1px solid #ddd; border-bottom-color:transparent; border-top-left-radius:5px; border-top-right-radius:5px; }
+@media (max-width:767px){
+	.jjfa-h1{ font-size:24px; }
+	.jjfa-h3{ font-size:16px; }
+	.solutions-shop{ margin-top:50px; }
+	.jjfa-text p,.solutions-name p{ font-size:12px; }
+	.solutions-shop{ border-top:1px solid #ccc; }
+}
+@media (min-width:768px){
+	.solutions-name{ width:50%; border-right:1px solid #ccc; float:left; }
+	.solutions-name.en{ width: 100%; border-right: none; float: none; }
+	.solutions-shop{ width:50%; float:left; }
+	.jjfa-h3{ font-size:18px; color:black; }
+}
+.solutions-name,.solutions-shop{ padding:20px; }
+.solutions-name{ line-height:180%; padding-left:0; }
+.solutions-name a{ display:block; padding:10px; }
+.solutions-product li{ width: 50%; float: left; }
+.solutions-product span{ display:inline-block; *zoom:1; *display:inline; }
+.solutions-proName{ padding: 5px; display:block; word-break:break-all; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.solutions-proName:hover{ text-decoration:none; background-color:#eee; }

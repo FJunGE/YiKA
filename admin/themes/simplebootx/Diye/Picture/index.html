@@ -1,0 +1,95 @@
+<admintpl file="header" />
+</head>
+<style>
+	.num , .current{
+		border:1px solid #6CD6BC;
+		padding:6px;
+	}
+</style>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">首页大图管理</a></li>
+		</ul>
+		<form class="js-ajax-form" action="" method="post">
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<!--<th width="15">发布版本</th>-->
+						<th width="50">当前图片</th>
+						<th width="50">关联的文章</th>
+						<th width="50">状态</th>
+						<th width="80">操作</th>
+					</tr>
+				</thead>
+				<php>
+					$status=array("1"=>"显示","0"=>"隐藏");
+					$molds=array("1"=>"中文版","2"=>"English ");
+				</php>
+				<foreach name="picdata" item="vo" >
+				<tr>
+					<!--<td>{$molds[$vo['edition']]}</td>-->
+					<td><img src="{$vo['imgpath']}" width="100px"></td>
+					<td><a href="/index.php?g=portal&m=article&a=index&id={$vo.id}" target="_blank">{$vo.posttitle}</a></td>
+					<td>
+						<php>
+							if( $vo['state'] == 0){
+								echo($status['0']);
+							}else{
+								echo($status['1']);
+							}
+						</php>
+					</td>
+					<td><a href="index.php?g=diye&m=Picture&a=edit&id={$vo.id}&banben={$vo.edition}">修改</a>
+					</td>
+				</tr>
+				</foreach>
+			</table>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var str = 0;
+					var id = tag = '';
+					$("input[name='ids[]']").each(function() {
+						if ($(this).attr('checked')) {
+							str = 1;
+							id += tag + $(this).val();
+							tag = ',';
+						}
+					});
+					if (str == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					var $this = $(this);
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+						title : "批量移动",
+						width : "80%"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

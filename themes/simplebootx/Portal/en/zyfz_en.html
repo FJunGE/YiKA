@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>EmpireChem - Career Development</title>
+	<!--bootstrap-->
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/kcxfz.css">
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav_en" />
+<!--内容-->
+<section>
+	<div class="banner">
+		<div class="content">
+			<div class="container">
+				<h1>Career Development</h1>
+				<p>We need professionals and encourage employees to develop their capacity. At EmpireChem, employees come together in interdisciplinary and global teams to realize exciting projects. We provide internal meetings to let our employees to communicate with their superior for performance and efficiency, then to better know different department duties and company culture. You are entrusted with customized goals to enhance your potential ability.</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="zyfz-content zyfz-top clearfix mt40">
+					<foreach  name="zydeveData" item="xo">
+						<div class="zyfz-section">
+							<div class="zyfz-title">{$xo.title}</div>
+							<div class="zyfz-text">
+								<p>{$xo.content}</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+				<hr class="marginTop60 paddingBottom20">
+				<div class="zyfz-tsrc text-center marginBottom40">
+					<foreach name="zydeveDatb" item="vo">
+						<div class="zyfz-h1">{$vo.title}</div>
+						<p>{$vo.content}</p>
+					</foreach>
+				</div>
+				<div class="zyfz-content clearfix marginBottom60">
+					<foreach  name="zydeveDatc" item="co">
+						<div class="zyfz-section">
+							<div class="zyfz-title">{$co.title}</div>
+							<div class="zyfz-text">
+								<p>{$co.content}</p>
+							</div>
+						</div>
+					</foreach>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<ul class="jyzp-ul nav padding10 mt40">
+					<li><a href="{:U('portal/Joindiye/joinus_en')}">Joining us</a></li>
+					<li><a class="zyfz-li" href="{:U('portal/Zydevelopment/index_en')}">Career Development</a></li>
+					<li><a href="{:U('portal/Recurit/recurit_en')}">Job Search</a></li>
+					<li><a href="{:U('portal/professional/index_en')}">Opportunities for Talents</a></li>
+					<li><a href="{:U('portal/Campusrecruit/campusrecruit')}">Campus Internships</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1_en" />
+</body>
+</html>

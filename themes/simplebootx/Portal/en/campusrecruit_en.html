@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>EmpireChem - Campus Internships</title>
+	<!--bootstrap-->
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/recruit.css">
+    <!-- <script src="__TMPL__Public/diye/js/recruit.js" type="text/javascript"></script> -->
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav_en" />
+<section>
+	<div class="banner bg">
+		<div class="container">
+			<h1>Campus Internships</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="filter padding10 marginTop35">
+					<div class="row">
+						<p>Sorry , No recruitment information</p>
+<!-- 						<div class="tr col-sm-2">
+							<p>Keywords</p>
+						</div>
+						<div class="col-sm-10">
+							<form method="post" action="{:U('portal/campusrecruit/campusrecruit')}" class="js-ajax-form form-inline clearfix">
+								<input type="text" id="keywords" name="keywords" class="filterSearch padding5 form-control" placeholder="Keywords">
+								<input type="submit" class="filterSubmit js-ajax-submit btn btn-warning" value="Search">
+							</form>
+						</div> -->
+					</div>
+				</div>
+<!-- 				<div class="text marginTop35">
+					<div class="table-responsive">
+						<table class="recruit-table table table-hover">
+							<thead>
+								<tr>
+									<td>Position</td>
+									<td>Types</td>
+									<td>Location</td>
+									<td>Quantity</td>
+									<td>Benefits</td>
+									<td>Valid from</td>
+								</tr>
+							</thead>
+							<tbody>
+								<foreach name="campusrecruitData" item="vo">
+								<tr data-toggle="modal" data-target="#ad{$vo.id}" >
+									<td>{$vo.name}</td>
+									<td>{$vo.model}</td>
+									<td>{$vo.origin}</td>
+									<td>{$vo.needs}</td>
+									<td>{$vo.pay}</td>
+									<td>{$vo.createtime}</td>
+								</tr>
+								</foreach>
+							</tbody>
+						</table>
+					</div>
+					<div class="xyzp text-center">
+						<ul class="pagination">
+							{$page}
+						</ul>
+					</div>
+				</div>
+				<foreach name="campusrecruitData" item="co">
+					<div class="modal fade" id="ad{$co.id}">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden=rue">&times;</span><span class="sr-only">Close</span></button>
+									<h4 class="modal-title">{$co.name}</h4>
+								</div>
+								<div class="modal-body">
+									<div class="row paddingTop10">
+										<div class="col-sm-6 paddingBottom10">Types：{$ho.model}</div>
+                                        <div class="col-sm-6 paddingBottom10">Location：{$ho.origin}</div>
+                                        <div class="col-sm-6 paddingBottom10">Valid from：{$ho.createtime}</div>
+                                        <div class="col-sm-6 paddingBottom10">Benefits：{$ho.pay}</div>
+									</div>
+									<h2>Duty:</h2>
+                                    <p>{$ho.responsibilities}</p>
+                                    <h2>require:</h2>
+                                    <p>{$ho.require}</p>
+								</div>
+								<div class="modal-footer">
+									<form action="{:U('portal/Recurit/add_recurit')}" method="POST" class="text-left" enctype="multipart/form-data">
+										<input type="hidden" name="id" value="{$co.id}" />
+										<div class="clearfix">
+											<label for="file" class="pull-left">biodata：</label>
+											<input type="file" onchange="updateFiles(this)" name="file" required="" class="pull-left">
+										</div>
+										<p class="message">Please send your resume and upload named, only upload rar, zip, 7z file format.</p>
+										<input type="submit" class="pull-right btn btn-warning" value="Delivery resume">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</foreach> -->
+			</div>
+			<div class="col-sm-2">
+				<ul class="jyzp-ul nav mt35 padding10">
+					<li><a href="{:U('portal/Joindiye/joinus_en')}">Joining us</a></li>
+					<li><a href="{:U('portal/Zydevelopment/index_en')}">Career Development</a></li>
+					<li><a href="{:U('portal/Recurit/recurit_en')}">Job Search</a></li>
+					<li><a href="{:U('portal/professional/index_en')}">Opportunities for Talents</a></li>
+					<li><a class="xyzp-li" href="{:U('portal/Campusrecruit/campusrecruit_en')}">Campus Internships</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1_en" />
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="__TMPL__Public/diye/js/html5shiv.min.js"></script>
+		<script src="__TMPL__Public/diye/js/respond.min.js"></script>
+	<![endif]-->
+	<meta charset="UTF-8">
+	<title>一佳门窗 - {$appmarkl.title}</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/product.css">
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section class="market">
+	<div class="container">
+		<div class="market-h1 marginBottom20">{$appmarkl.title}</div>
+		<div class="row">
+			<div class="market-text col-sm-7">
+				{$appmarkl.content}
+			</div>
+			<div class="market-img col-sm-5"><img src="data/{$appmarkl.picpath}" alt=""></div>
+		</div>
+		<hr>
+		<div class="market-h2 text-center">产品列表</div>
+		<p class="market-h2-p text-center marginBottom20">PRODUCT LIST</p>
+		<div class="row paddingBottom60">
+			<ul class="market-list clearfix">
+				<foreach name="productdata" item="vo">
+					<li class="clearfix">
+						<div class="col-xs-9">
+							<div class="list-title"><a href="index.php?g=portal&m=Product&a=productdetail&id={$vo.id}">{$vo.name}</a></div>
+							<p>{$vo.features}</p>
+						</div>
+						<div class="list-img col-xs-3"><a href="index.php?g=portal&m=Product&a=productdetail&id={$vo.id}"><img src="__TMPL__Public/diye/images/marketIcon.png" alt=""></a></div>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

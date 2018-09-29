@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 联系方式</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/jquery.mousewheel.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/page.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/tzjj.css">
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/lxfs.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+	<script type="text/javascript" src="__TMPL__Public/diye/js/map.js"></script>
+	
+	<script type="text/javascript">
+	
+		keyword = [
+			<foreach name="contactDatb" item="va">
+			{title:"{$va.title}",address:"{$va.address}"},
+			</foreach>
+			{title:"null",address:"null"}
+		];
+	
+	</script>
+	
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<div class="tzjj container">
+	<ol class="breadcrumb borderRadius0 marginTop10">
+		<li><a href="{:U('portal/index/index')}">首页</a></li>
+		<li>联系我们</li>
+	</ol>
+	<h1>联系我们</h1>
+	<style type="text/css">
+		/*.tzjj div.row div+div.col-sm-4:nth-child(even){ padding-left:10px; }*/
+	</style>
+    <hr class="paddingBottom10">
+    <div id="map"></div>
+     <foreach name="contactDatb" item="vb">
+    	<h4 class="marginTop20">{$vb.title}:</h4>
+    	<p>{$vb.address}</p>
+    </foreach>
+	<hr>
+	<div class="row paddingBottom60">
+		<foreach name="contactData" item="vo">
+		<div class="col-sm-4">
+			<ul class="lxwm-ul">
+				<li>{$vo.title}：</li>
+				<li>{$vo.name}</li>
+				<li><span data-int="{$vo.stateemail}">邮箱：<a href="mailto:{$vo.email}">{$vo.email}</a></span></li>
+				<li><span data-int="{$vo.statetele}">电话：{$vo.telephone}</span></li>
+				<li><span data-int="{$vo.statephone}">手机：{$vo.phone}</span></li>
+			</ul>
+		</div>
+		</foreach>
+	</div>
+</div>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

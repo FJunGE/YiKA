@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c25ca64d-4a36-4adc-a514-612c3efc3aa2" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/themes/simplebootx/Portal/zh/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-44">
+              <caret line="319" column="49" lean-forward="false" selection-start-line="319" selection-start-column="49" selection-end-line="319" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_en.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/themes/simplebootx/Portal/en/index_en.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-144">
+              <caret line="165" column="32" lean-forward="false" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav_en.html" pinned="false" current-in-tab="true">
+        <entry file="file://Z:/themes/simplebootx/Public/nav_en.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="106" column="36" lean-forward="false" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recurit_en.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/themes/simplebootx/Portal/en/recurit_en.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="campusrecruit_en.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/themes/simplebootx/Portal/en/campusrecruit_en.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/admin/themes/simplebootx/Admin/Setting/site.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="89" column="32" lean-forward="false" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
+              <folding>
+                <marker date="1537974865338" expanded="true" signature="11983:11993" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/themes/simplebootx/Public/nav.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1139">
+              <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZydevelopmentController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/application/Portal/Controller/ZydevelopmentController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomebaseController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/application/Common/Controller/HomebaseController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="259" column="26" lean-forward="false" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mtlx_en.html" pinned="false" current-in-tab="false">
+        <entry file="file://Z:/themes/simplebootx/Portal/en/mtlx_en.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="22" column="86" lean-forward="false" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>application</find>
+      <find>packaging</find>
+      <find>product_navid</find>
+      <find>material</find>
+      <find>time</find>
+      <find>planid</find>
+      <find>ps</find>
+      <find>verify</find>
+      <find>2</find>
+      <find>add_user</find>
+      <find>checkuser</find>
+      <find>example</find>
+      <find>navdata</find>
+      <find>message</find>
+      <find>plan</find>
+      <find>ajax_handle_image</find>
+      <find>success</find>
+      <find>ajaxSubmit</find>
+      <find>action</find>
+      <find>state</find>
+      <find>plandata</find>
+      <find>cate</find>
+      <find>资讯管理</find>
+      <find>html_cache_on</find>
+      <find>$cmf_settings</find>
+      <find>cmf_settings</find>
+      <find>email</find>
+      <find>site_admin_email</find>
+      <find>Zydevelopment</find>
+      <find>Campusrecruit</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="Z:/data/conf/db.php" />
+        <option value="Z:/admin/themes/simplebootx/Diye/Plan/index.html" />
+        <option value="Z:/themes/simplebootx/Portal/zh/jjfa.html" />
+        <option value="Z:/themes/simplebootx/Public/nav.html" />
+        <option value="Z:/admin/themes/simplebootx/Admin/login.html" />
+        <option value="Z:/admin/themes/simplebootx/Public/assets/css/admin_login.css" />
+        <option value="Z:/themes/simplebootx/Portal/zh/login.html" />
+        <option value="Z:/admin/themes/simplebootx/Diye/Product/add.html" />
+        <option value="Z:/themes/simplebootx/Portal/zh/product.html" />
+        <option value="Z:/application/Portal/Controller/ProductController.class.php" />
+        <option value="Z:/application/Common/Common/function.php" />
+        <option value="Z:/admin/themes/simplebootx/Diye/Plan/edit.html" />
+        <option value="Z:/admin/themes/simplebootx/Diye/Product/edit.html" />
+        <option value="Z:/application/Diye/Controller/PlanController.class.php" />
+        <option value="Z:/application/Portal/Controller/PlanController.class.php" />
+        <option value="Z:/themes/simplebootx/Portal/zh/caselist.html" />
+        <option value="Z:/themes/simplebootx/Portal/zh/productdetail.html" />
+        <option value="Z:/admin/themes/simplebootx/Diye/Product/demand.html" />
+        <option value="Z:/application/Diye/Controller/ProductController.class.php" />
+        <option value="Z:/themes/simplebootx/Portal/zh/mtlx.html" />
+        <option value="C:/Windows/System32/drivers/etc/hosts" />
+        <option value="X:/application/Portal/Controller/ProductController.class.php" />
+        <option value="X:/themes/simplebootx/Portal/zh/index.html" />
+        <option value="X:/themes/simplebootx/Portal/zh/category.html" />
+        <option value="X:/application/Portal/Lang/zh-cn/admin_menu.php" />
+        <option value="X:/themes/simplebootx/Public/footer1.html" />
+        <option value="X:/themes/simplebootx/Portal/zh/mtlx.html" />
+        <option value="X:/admin/themes/simplebootx/Admin/Setting/site.html" />
+        <option value="X:/themes/simplebootx/Public/nav.html" />
+        <option value="X:/application/Common/Controller/HomebaseController.class.php" />
+        <option value="X:/themes/simplebootx/Public/nav_en.html" />
+        <option value="X:/application/Portal/Controller/IndexController.class.php" />
+        <option value="X:/themes/simplebootx/Portal/en/index_en.html" />
+        <option value="E:/Dream/dy/application/Diye/Controller/HistoryController.class.php" />
+        <option value="X:/application/Diye/Controller/HistoryController.class.php" />
+        <option value="Z:/themes/simplebootx/Portal/zh/index.html" />
+        <option value="Z:/themes/simplebootx/Portal/en/index_en.html" />
+        <option value="Z:/themes/simplebootx/Portal/en/recurit_en.html" />
+        <option value="Z:/themes/simplebootx/Portal/en/campusrecruit_en.html" />
+        <option value="Z:/admin/themes/simplebootx/Admin/Setting/site.html" />
+        <option value="Z:/application/Common/Controller/HomebaseController.class.php" />
+        <option value="Z:/themes/simplebootx/Public/nav_en.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="412" />
+    <option name="y" value="299" />
+    <option name="width" value="1257" />
+    <option name="height" value="712" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Setting" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Diye" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Portal" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Portal" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Portal" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Portal" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Z:" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="Z:/" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c25ca64d-4a36-4adc-a514-612c3efc3aa2" name="Default" comment="" />
+      <created>1535729327138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535729327138</updated>
+      <workItem from="1535729329341" duration="674000" />
+      <workItem from="1535766430679" duration="2968000" />
+      <workItem from="1535799976452" duration="3206000" />
+      <workItem from="1535808872090" duration="9725000" />
+      <workItem from="1535858405542" duration="15166000" />
+      <workItem from="1535898826886" duration="2432000" />
+      <workItem from="1535984116401" duration="6445000" />
+      <workItem from="1536062129486" duration="6985000" />
+      <workItem from="1536242029847" duration="4300000" />
+      <workItem from="1536330248601" duration="2457000" />
+      <workItem from="1536373734747" duration="1789000" />
+      <workItem from="1536388869631" duration="180000" />
+      <workItem from="1536389063174" duration="602000" />
+      <workItem from="1536394440369" duration="7180000" />
+      <workItem from="1536420367704" duration="5640000" />
+      <workItem from="1536458193403" duration="7284000" />
+      <workItem from="1536579152504" duration="6245000" />
+      <workItem from="1536752036093" duration="6228000" />
+      <workItem from="1536930148409" duration="7883000" />
+      <workItem from="1536969462154" duration="18240000" />
+      <workItem from="1536999948124" duration="4583000" />
+      <workItem from="1537010800461" duration="15562000" />
+      <workItem from="1537068219746" duration="3364000" />
+      <workItem from="1537089484351" duration="602000" />
+      <workItem from="1537090402025" duration="9253000" />
+      <workItem from="1537105218956" duration="8831000" />
+      <workItem from="1537185334665" duration="6798000" />
+      <workItem from="1537274936479" duration="3433000" />
+      <workItem from="1537359749763" duration="3108000" />
+      <workItem from="1537369083000" duration="1693000" />
+      <workItem from="1537444553752" duration="5660000" />
+      <workItem from="1537454719000" duration="169000" />
+      <workItem from="1537605465941" duration="1824000" />
+      <workItem from="1537610639228" duration="10006000" />
+      <workItem from="1537686145476" duration="7116000" />
+      <workItem from="1537699270370" duration="4217000" />
+      <workItem from="1537772167696" duration="1039000" />
+      <workItem from="1537967605861" duration="45000" />
+      <workItem from="1537967652911" duration="3791000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="206723000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19669509" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117803834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://Z:/application/Common/Common/function.php" />
+    <entry file="file://Z:/application/Portal/Controller/PlanController.class.php" />
+    <entry file="file://Z:/themes/simplebootx/Portal/zh/caselist.html" />
+    <entry file="file://Z:/admin/themes/simplebootx/Diye/Plan/edit.html" />
+    <entry file="file://Z:/application/Portal/Controller/ProductController.class.php" />
+    <entry file="file://Z:/application/Diye/Controller/PlanController.class.php" />
+    <entry file="file://Z:/admin/themes/simplebootx/Diye/Recurit/index.html" />
+    <entry file="file://Z:/admin/themes/simplebootx/Diye/Product/demand.html" />
+    <entry file="file://Z:/themes/simplebootx/Portal/zh/productdetail.html" />
+    <entry file="file://Z:/public/js/common.js" />
+    <entry file="file://Z:/application/Diye/Controller/ProductController.class.php" />
+    <entry file="file://Z:/themes/simplebootx/Portal/zh/mtlx.html" />
+    <entry file="file://C:/Windows/System32/drivers/etc/hosts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/application/Admin/Controller/AdController.class.php" />
+    <entry file="file://X:/application/Admin/Controller/IndexController.class.php" />
+    <entry file="file://X:/themes/simplebootx/Portal/zh/caselist.html" />
+    <entry file="file://X:/application/Portal/Controller/PlanController.class.php" />
+    <entry file="file://X:/themes/simplebootx/Portal/zh/productxx.html" />
+    <entry file="file://X:/themes/simplebootx/Portal/zh/category.html" />
+    <entry file="file://X:/themes/simplebootx/Portal/zh/product.html" />
+    <entry file="file://X:/application/Diye/Controller/ProductController.class.php" />
+    <entry file="file://X:/themes/simplebootx/Portal/zh/index.html" />
+    <entry file="file://X:/themes/simplebootx/Portal/zh/mtlx.html" />
+    <entry file="file://X:/themes/simplebootx/Public/footer1.html" />
+    <entry file="file://X:/application/Common/Common/function.php" />
+    <entry file="file://X:/application/Portal/Lang/zh-cn/admin_menu.php" />
+    <entry file="file://X:/admin/themes/simplebootx/Admin/Setting/site.html" />
+    <entry file="file://X:/application/Portal/Controller/ProductController.class.php" />
+    <entry file="file://X:/application/Common/Controller/HomebaseController.class.php" />
+    <entry file="file://X:/themes/simplebootx/Public/nav.html" />
+    <entry file="file://X:/themes/simplebootx/Public/nav_en.html" />
+    <entry file="file://X:/simplewind/Core/Library/Think/Model.class.php" />
+    <entry file="file://X:/application/Admin/Controller/SettingController.class.php" />
+    <entry file="file://X:/application/Portal/Controller/IndexController.class.php" />
+    <entry file="file://X:/themes/simplebootx/Portal/en/index_en.html" />
+    <entry file="file://X:/themes/simplebootx/Portal/en/history_en.html" />
+    <entry file="file://E:/Dream/diye/admin/themes/simplebootx/Diye/History/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Dream/dy/admin/themes/simplebootx/Diye/History/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/application/Portal/Controller/HistoryController.class.php" />
+    <entry file="file://E:/Dream/dy/application/Diye/Controller/HistoryController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/application/Diye/Controller/HistoryController.class.php" />
+    <entry file="file://Z:/themes/simplebootx/Portal/en/mtlx_en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="22" column="86" lean-forward="false" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/themes/simplebootx/Portal/zh/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="319" column="49" lean-forward="false" selection-start-line="319" selection-start-column="49" selection-end-line="319" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/themes/simplebootx/Portal/en/recurit_en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/themes/simplebootx/Portal/en/campusrecruit_en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/admin/themes/simplebootx/Admin/Setting/site.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="89" column="32" lean-forward="false" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
+          <folding>
+            <marker date="1537974865338" expanded="true" signature="11983:11993" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/application/Portal/Controller/ZydevelopmentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/application/Common/Controller/HomebaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="259" column="26" lean-forward="false" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/themes/simplebootx/Portal/en/index_en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="165" column="32" lean-forward="false" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/themes/simplebootx/Public/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1139">
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/themes/simplebootx/Public/nav_en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="106" column="36" lean-forward="false" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

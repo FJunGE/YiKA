@@ -1,0 +1,119 @@
+<admintpl file="header" />
+</head>
+<style>
+	.num , .current{
+		border:1px solid #6CD6BC;
+		padding:6px;
+	}
+	table{
+		font-size:14px;
+	}
+	
+	.pagination{
+		margin:0 auto;
+		width:500px;
+		margin-top:10px;
+	}
+</style>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">发展历史</a></li>
+			<li><a href="{:U('History/add',array('term'=>empty($term['term_id'])?'':$term['term_id']))}" target="_self">添加历史信息</a></li>
+		</ul>
+		<form class="js-ajax-form" action="" method="post">
+			<div class="table-actions">
+				<!-- button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/listorders')}">{:L('SORT')}</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/check',array('check'=>1))}" data-subcheck="true">审核</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/top',array('top'=>1))}" data-subcheck="true">置顶</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/top',array('untop'=>1))}" data-subcheck="true">取消置顶</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/recommend',array('recommend'=>1))}" data-subcheck="true">推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/recommend',array('unrecommend'=>1))}" data-subcheck="true">取消推荐</button>-->
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('History/delete')}" data-subcheck="true" data-msg="你确定删除吗？">批量删除</button>
+				<!-- <button class="b tn btn-primary btn-small js-articles-move" type="button">批量移动</button> -->
+			</div>
+			<table class="table table-hover table-bordered table-list" style="table-layout:fixed;">
+				<thead>
+					<tr>
+						<th width="2%"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="5%">版本</th>
+						<th width="7%">历史年份</th>
+						<th width="90%">历史信息</th>
+						<th width="15%">创建时间</th>
+						<th width="6%">操作</th>
+					</tr>
+				</thead>
+				<php>
+				$molds = array("1"=>"中文版","2"=>"英文版");
+				</php>
+				<foreach name="historyData" item="vo">
+				<tr>
+					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}" title="ID:{$vo.id}"></td>
+					<td>{$molds[$vo['edition']]}</td>
+					<td>{$vo.year}年</td>
+					<td>{$vo.content}</td>
+					<td>{$vo.createtime}</td>
+					<td><a href="{:U('History/edit',array('id'=>$vo['id']))}">修改</a> | <a class="js-ajax-delete" href="{:U('History/delete',array('id'=>$vo['id']))}">删除</a></td>
+				</tr>
+				</foreach>
+				<tfoot>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="10">发布</th>
+						<th width="20">历史年份</th>
+						<th width="150">历史信息</th>
+						<th width="20">创建时间</th>
+						<th width="45">操作</th>
+					</tr>
+				</tfoot>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var str = 0;
+					var id = tag = '';
+					$("input[name='ids[]']").each(function() {
+						if ($(this).attr('checked')) {
+							str = 1;
+							id += tag + $(this).val();
+							tag = ',';
+						}
+					});
+					if (str == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					var $this = $(this);
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+						title : "批量移动",
+						width : "80%"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

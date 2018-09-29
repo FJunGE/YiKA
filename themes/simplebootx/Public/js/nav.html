@@ -1,0 +1,110 @@
+<nav class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<div class="navbar-header">
+				<!--响应后的汉堡按钮-->
+				<a class="btn btn-link navbar-toggle borderRadius0 marginTop20" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<!--logo-->
+				<a href="index.php?g=portal&m=index&a=index" class="brand z1 pr"><img src="__TMPL__Public/diye/images/logo.png" alt=""></a>
+			</div>
+			<!--导航-->
+			<div class="navbar-collapse collapse pr" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-xs navbar-xs-overflow" id="navbar-collapse-ul">
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="">公司<b class="caret"></b></a>
+						<div class="row dropdown-menu p20 border0 nava">
+							<div class="col-sm-4 positionStatic marginBottom20">
+								<h1 class="nav-title btnone">关于我们<span class="glyphicon nav-title-icon"></span></h1>
+								<ul class="nav-ul">
+									<li><a href="{:U('portal/Company/company')}">公司介绍</a></li>
+									<li><a href="{:U('portal/Idea/idea')}">帝业理念</a></li>
+									<li><a href="{:U('portal/Kcxdevelopment/kcxdevelopment')}">可持续发展</a></li>
+									<li><a href="{:U('portal/Research/research')}">研发与创新</a></li>
+									<li><a href="{:U('portal/Collaborate/index')}">帝业投资基金</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4 positionStatic marginBottom20">
+								<h1 class="nav-title">新闻与发布<span class="glyphicon nav-title-icon"></span></h1>
+								<ul class="nav-ul">
+									<li><a href="{:U('portal/index/news')}">新闻中心</a></li>
+									<li><a href="{:U('portal/expo/index')}">展会与发布</a></li>
+									<li><a href="{:U('portal/investor/investor')}">投资者关系与财务信息</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4 positionStatic marginBottom20">
+								<h1 class="nav-title">精英招聘<span class="glyphicon nav-title-icon"></span></h1>
+								<ul class="nav-ul">
+									<li><a href="{:U('portal/Joindiye/joinus')}">为什么加入帝业</a></li>
+									<li><a href="{:U('portal/Zydevelopment/index')}">职业发展</a></li>
+									<li><a href="{:U('portal/Recurit/recurit')}">招聘岗位</a></li>
+									<li><a href="{:U('portal/professional/index')}">专业人士</a></li>
+									<li><a href="{:U('portal/Campusrecruit/campusrecruit')}">校园招聘</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="">产品与市场<b class="caret"></b></a>
+						<div class="row dropdown-menu p20 border0 nava">
+							<div class="col-sm-12 positionStatic">
+								<div class="row">
+									<div class="col-sm-3 positionStatic">
+										<h1 class="nav-title btnone">产品分类<span class="glyphicon nav-title-icon"></span></h1>
+										<ul class="nav-ul">
+										<foreach name="navl" item="co">
+											<li><a href="index.php?g=portal&m=Product&a=product&navid={$co.id}">{$co.name}</a></li>
+										</foreach>
+									</div>
+									<div class="col-sm-9 positionStatic">
+										<h1 class="nav-title">应用市场<span class="glyphicon nav-title-icon"></span></h1>
+										<ul class="nav-ul nav-product-ul">
+											<foreach name="plannav" item="vo">
+												<li><a href="index.php?g=portal&m=Plan&a=detail&id={$vo.id}">{$vo.title}</a></li>
+											</foreach>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="">支持平台<b class="caret"></b></a>
+						<div class="row dropdown-menu p20 border0 nava">
+							<div class="col-sm-4 positionStatic marginBottom20">
+								<h1 class="nav-title btnone">沟通平台<span class="glyphicon nav-title-icon"></span></h1>
+								<ul class="nav-ul">
+									<li><a href="{:U('portal/Purchase/index')}">供应商与合作伙伴</a></li>
+									<li><a href="{:U('portal/Visitor/visitor')}">媒体联系</a></li>
+									<li><a href="{:U('portal/Contact/index')}">联系我们</a></li>
+									<li><a href="{:U('portal/Product/product')}">产品搜索</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!--登录-->
+				<ul class="nav fr">
+					<?php if(session('user_login') != null){ ?>
+						<li class="dropdown user ">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								<img src="__TMPL__Public/diye/images/headicon.png" class="headIcon" alt="">&nbsp;<span class="userName">{$Think.session.user_login}</span><b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu pull-right marginTop0 border0 borderRadius0">
+								<li><a href="#"><i></i>&nbsp;个人中心</a></li>
+								<li><a href="#"><i></i>&nbsp;退出</a></li>
+							</ul>
+						</li>
+					<?php }else{ ?>
+						<li class="user offline">
+							<a href="{:U('portal/user/login')}"><img src="__TMPL__Public/diye/images/headicon.png" class="headIcon" alt="">&nbsp;登录</a>
+						</li>
+					<?php }?>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>

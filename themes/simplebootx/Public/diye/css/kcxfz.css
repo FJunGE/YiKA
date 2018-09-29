@@ -1,0 +1,46 @@
+.banner .banner-img,section .row img{width:100%;}
+.banner .container,.imgBox-text,.text-section{ color:white; font-family:"微软雅黑"; }
+.banner .content{ background:url('../images/zyfzbanner.jpg') no-repeat; background-size:cover; height:420px; padding-top:100px; }
+.banner{ position:relative; z-index:-1; }
+/*.banner .container{ position:absolute; top:20%; left:5%; }*/
+.banner .container h1{ font-size:42px; }
+.banner .container p{ line-height:180%; }
+@media (min-width:1367px){
+	.banner-img{ height:576px; }
+}
+/*可持续发展*/
+.kcxfz{ background-color:#f7f7f7; }
+.fm{ font-family:"微软雅黑"; }
+.kcxfz-title .breadcrumb{ background-color:white; padding-left:0; }
+.kcxfz-title h1{ font-size:32px; }
+.kcxfz-title h3,.kcxfz-title a{ margin:20px 0 20px; }
+.kcxfz img,.kcxfz-img img{ width:100%; }
+.kcxfz h2,.kcxfz-title h3{ font-size:22px; }
+.kcxfz a h2{ color:black; }
+.kcxfz a:hover{ text-decoration:none; }
+.kcxfz p{ text-overflow:ellipsis; overflow:hidden; word-break:break-all; white-space:nowrap; width:100%; color:#666; }
+.kcxfz .text-danger{ display:block; margin-bottom:20px; }
+.kcxfz .text-danger:hover{ text-decoration:underline; }
+@media (min-width:768px){
+	.kcxfzxx{ min-height:470px; }
+	.kcxfzxx p{ padding-right:40px; }
+	.kcxfz img,.kcxfz-img img{ height: 220px; }
+}
+/*职业发展*/
+.zyfz-section{ background-color:#f5f5f5; padding:10px; margin-bottom:10px; }
+.zyfz-section:hover{ background-color:#ed9336 !important; }
+.zyfz-section:hover .zyfz-title{ color:white !important; }
+.zyfz-section:hover .zyfz-text{ color:white !important; }
+.zyfz-section:nth-of-type(even){ background-color:#f0f0f0; }
+.zyfz-title{ color:#ff780f; font-family:"黑体"; font-size:30px; padding:10px 0; }
+.zyfz-text{ color:#666666; font-size:12px; letter-spacing:1px; line-height:240%; padding-left:5px; }
+.zyfz-number{ font-size:38px; font-family:"宋体" }
+.zyfz-h1{ font-family:"黑体"; font-size:34px; padding-bottom:30px; }
+.zyfz-tsrc p{ padding:0 10px; }
+.mt40{margin-top:40px}
+.zyfz-li{ background-color:#eeeeee; color:#ff780f !important; border-left:4px solid #ff780f; }
+@media (min-width:768px){
+	.zyfz-content{ overflow:hidden; }
+	.zyfz-tsrc p{ padding:0 110px; }
+	.zyfz-section{ width:33.33%; padding:20px 40px; float:left; padding-bottom:2020px !important; margin-bottom:-2000px !important; }
+}

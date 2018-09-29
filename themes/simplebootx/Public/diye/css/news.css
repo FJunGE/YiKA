@@ -1,0 +1,23 @@
+/*内容样式*/
+
+.section-sidebar{ padding:0; }
+.section-text h2 a{color:#666666;}
+.section-text h2 a:hover{ color:#FFAC19; }
+.section-text .pagination li a{ border-radius:0; }
+.sidebar-ul{ background:white; margin-bottom:20px; }
+.section-text-li{ background-color:white; border-top:3px solid transparent; transition:border 0.3s; -webkit-transition:border 0.3s; -moz-transition:border 0.3s; -o-transition:border 0.3s; padding:10px 20px 0; margin-bottom:20px; }
+.section-text-li h2{ font-size:24px; margin:10px 0 15px;}
+.section-text-li h2 a:hover{ text-decoration:none; }
+.section-text-li:hover{ border-top:3px solid #FFAC19; }
+.section-text-li img{ width:100%; }
+.section-text-li p{color:#b29999;}
+.text-li-section{ font-family:"宋体"; line-height:170%; color:#999999; }
+/*侧边栏*/
+.sidebar-title{ padding-bottom:10px; border-bottom:1px solid #999999; }
+.sidebar-title h2{ color:#666666; font-size:22px; padding-bottom:7px; display:inline; border-bottom:3px solid #ffac19; }
+.sidebar-news li{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:10px 0; }
+.sidebar-news span{ font-weight:bold; padding:0px 5px; margin-right:5px; background-color:#999999; color:white; }
+.top3{ background-color:#ffac19 !important; }
+@media (max-width:767px){
+	.section-sidebar{ display:none; }
+}

@@ -1,0 +1,18 @@
+/* CSS Document */
+.txt-page,.txt-page2{font-family:"微软雅黑";}
+.txt-page > p{line-height:1.6em;margin-bottom:1.6em;}
+.txt-page > h3,h4{padding:10px 0px;}
+.txt-page2 .row{padding:70px 0;}
+.txt-page2 >h3{padding:30px 0 10px 0;}
+.txt-page2 .btn{margin-bottom: 30px;}
+.highlight{padding:9px 14px;border:1px solid #e1e1e8;background:#f7f7f9;border-radius:4px;margin-bottom:14px;height:180px;}
+.lujingnav{background-color:#fff; padding-left:0;}
+.bold{font-weight:bold}
+.error{ color:red; display:none; }
+@media (min-width:767px){
+	.tl{text-align:left !important;}
+}
+#gysdj{margin-bottom:75px;}
+.tzjjSubmit{ width:100%; }
+.file{ margin-top:7px; }
+.gys{ display:none; }

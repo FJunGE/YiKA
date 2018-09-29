@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="__TMPL__Public/diye/js/html5shiv.min.js"></script>
+		<script src="__TMPL__Public/diye/js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 展会与发布</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/zhyfb.css">
+	<script src="__TMPL__Public/diye/js/zhyfb.js" type="text/javascript"></script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<div class="container paddingBottom60">
+	<ol class="breadcrumb marginTop10">
+		<li><a href="{:U('portal/index/index')}">首页</a></li>
+		<li class="active">展会活动</a></li>
+	</ol>
+	<h1 class="title">近期展会</h1>
+	<hr>
+	<div class="row paddingBottom10">
+		<foreach name="jqexpo" item="vo">
+		<div class="col-md-4">
+			<div class="zhCard bgn">
+				<h4><a href="{:U('portal/Expo/detail',array('id' => $vo['id']))}">{$vo.title}</a></h4>
+				<p>{$vo.expotime},{$vo.address}</p>
+				<div class="more"><a href="{:U('portal/Expo/detail',array('id' => $vo['id']))}">了解更多</a></div>
+			</div>
+		</div>
+		</foreach>
+	</div>
+	<!--第二行-->
+	<h1 class="title">往期展会</h1>
+	<hr>
+	<div class="wqzh">
+	
+		<div class="row">
+		<foreach name="wqexpo" item="vo">
+			<div class="col-md-4">
+				<div class="zhCard">
+					<h4><a href="{:U('portal/Expo/detail',array('id' => $vo['id']))}">{$vo.title}</a></h4>
+					<p>{$vo.expotime},{$vo.address}</p>
+					<div class="more"><a href="{:U('portal/Expo/detail',array('id' => $vo['id']))}">了解更多</a></div>
+				</div>
+			</div>
+		</foreach>
+		</div>
+		
+		<div class="zhMore">
+			<div class="row">
+			<foreach name="moreexpo" item="vo">
+				<div class="col-md-4">
+						<div class="zhCard">
+							<h4><a href="{:U('portal/Expo/detail',array('id' => $vo['id']))}">{$vo.title}</a></h4>
+							<p>{$vo.expotime},{$vo.address}</p>
+							<div class="more"><a href="{:U('portal/Expo/detail',array('id' => $vo['id']))}">了解更多</a></div>
+						</div>
+				</div>
+		</foreach>
+			</div>
+		</div>
+	</div>
+	<a href="javascript:;" class="moreBtn btn btn-warning">更多展会</a>
+</div>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

@@ -1,0 +1,142 @@
+<admintpl file="header" />
+</head>
+<style>
+	.num , .current{
+		border:1px solid #6CD6BC;
+		padding:6px;
+	}
+	.pagination{
+		margin:0 auto;
+		width:500px;
+		margin-top:10px;
+	}
+	.test{
+		white-space:nowrap; 
+		overflow:hidden;
+		text-overflow: ellipsis;
+		width: 25em;
+		cursor:pointer;
+	}
+</style>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">公司合作项目管理</a></li>
+		</ul>
+		<form class="js-ajax-form" action="" method="post">
+			<div class="table-actions">
+				<!-- button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/listorders')}">{:L('SORT')}</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/check',array('check'=>1))}" data-subcheck="true">审核</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/check',array('uncheck'=>1))}" data-subcheck="true">取消审核</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/top',array('top'=>1))}" data-subcheck="true">置顶</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/top',array('untop'=>1))}" data-subcheck="true">取消置顶</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/recommend',array('recommend'=>1))}" data-subcheck="true">推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('AdminPost/recommend',array('unrecommend'=>1))}" data-subcheck="true">取消推荐</button>-->
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Collaborate/delete')}" data-subcheck="true" data-msg="你确定删除吗？">批量删除</button>
+				<!-- <button class="b tn btn-primary btn-small js-articles-move" type="button">批量移动</button> -->
+			</div>
+			<table class="table table-hover table-bordered table-list" style="table-layout:fixed;">
+				<thead>
+					<tr>
+						<th width="1%"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<!--<th width="2%">版本</th>-->
+						<th width="5%">项目名称</th>
+						<th width="11%">项目优势</th>
+						<th width="5%">现阶段需求</th>
+						<th width="5%">下阶段需求</th>
+						<th width="5%">可应用市场</th>
+						<th width="4%">负责人姓名</th>
+						<th width="4%">联系方式</th>
+						<th width="2%">附件</th>
+						<th width="5%">登记时间</th>
+						<th width="3%">操作</th>
+					</tr>
+				</thead>
+				<php>
+					$molds = array("1"=>"中文版","2"=>"英文版");
+				</php>
+				<foreach name="collaborateData" item="vo">
+				<tr>
+					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}" title="ID:{$vo.id}"></td>
+					<!--<td>{$molds[$vo['edition']]}</td>-->
+					<td class="test"><a href="{:U('Collaborate/check',array('id'=>$vo['id']))}">{$vo.xmmc}</a></td>
+					<td class="test">{$vo.xmys}</td>
+					<td class="test">{$vo.xmxq}</td>
+					<td class="test">{$vo.xmxqx}</td>
+					<td class="test">{$vo.yysc}</td>
+					<td class="test">{$vo.name}</td>
+					<td class="test">{$vo.mobile}</td>
+					<td><php>if(empty($vo['file'])){echo " ";}</php><a target="_blank" href="data/{$vo.file}"><php>if(!empty($vo['file'])){echo "有附件";}</php></a></td>
+					<td>{$vo.createtime}</td>
+					<td>
+						<a class="js-ajax-delete" href="{:U('Collaborate/delete',array('id'=>$vo['id']))}">删除</a> | 
+						<a href="{:U('Collaborate/check',array('id'=>$vo['id']))}">查看</a>
+					</td>
+				</tr>
+				</foreach>
+				<tfoot>
+					<tr>
+						<th width="1%"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<!--<th width="2%">版本</th>-->
+						<th width="5%">项目名称</th>
+						<th width="11%">项目优势</th>
+						<th width="5%">现阶段需求</th>
+						<th width="5%">下阶段需求</th>
+						<th width="5%">可应用市场</th>
+						<th width="4%">负责人姓名</th>
+						<th width="4%">联系方式</th>
+						<th width="2%">附件</th>
+						<th width="5%">登记时间</th>
+						<th width="3%">操作</th>
+					</tr>
+				</tfoot>
+			</table>
+			<div class="pagination">{$page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var str = 0;
+					var id = tag = '';
+					$("input[name='ids[]']").each(function() {
+						if ($(this).attr('checked')) {
+							str = 1;
+							id += tag + $(this).val();
+							tag = ',';
+						}
+					});
+					if (str == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					var $this = $(this);
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+						title : "批量移动",
+						width : "80%"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

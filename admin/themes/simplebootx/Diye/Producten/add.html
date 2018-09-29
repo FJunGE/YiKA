@@ -1,0 +1,80 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed">
+	<input type="text" value="{$time}" style="display:none;">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Producten/index')}">英文版产品信息管理</a></li>
+			<li class="active"><a href="javascript:;">新增产品信息</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal" action="{:U('Producten/add_plan')}" enctype="multipart/form-data" 
+			method="post" onsubmit="return checkFiles()">
+				<table border="1">
+						<tr>
+							<th>标题</th>
+							<td><input type="text" name="title"></td>
+						</tr>
+						<tr>
+							<th>状态</th>
+							<td>
+								<lable><input type="radio" name="state" value="1" checked="checked"> 发布 </lable>&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="radio" name="state" value="0"> 不发布  </lable>	
+							</td>
+						</tr>
+						<tr>
+							<th>产品文字描述</th>
+							<td>
+								<script type="text/plain" id="plan_content" name="plan_content"></script>
+							</td>
+						</tr>
+						<tr>
+							<th>产品属性详细内容</th>
+							<td>
+								<script type="text/plain" id="pro_content" name="pro_content"></script>
+							</td>
+						</tr>
+						<tr>
+							<th>封面图</th>
+							<td>
+								<input type="file" name="pic">
+								<span>格式限制：jpg，jpeg，png，gif</span>
+							</td>
+						</tr>
+						<tr>
+							<th>附件上传</th>
+							<td>
+								<input type="file" name="planfile">
+								<span>格式限制：zip，rar</span>
+							</td>
+						</tr>
+					
+					<tr>
+						<th></th>
+						<td ><input type="submit" class="btn btn-primary J_ajax_submit_btn"  value="提交"/></td>
+					</tr>
+				</table>
+					<div class="uploaded_avatar_area">
+						<div id="cmi" class="uploaded_avatar_btns">
+							
+							
+							
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.min.js"></script>
+</body>
+<script type="text/javascript">
+	editorcontent = new baidu.editor.ui.Editor();
+	editorcontent.render('pro_content');
+	
+
+	editorcontent1 = new baidu.editor.ui.Editor();
+	editorcontent1.render('plan_content');
+	
+</script>
+</html>

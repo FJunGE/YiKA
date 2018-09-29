@@ -1,0 +1,78 @@
+.tzjj h1{ font-size:26px; font-family: 黑体; margin-bottom: 0; margin-top: 0; }
+
+.tzjj{ font-family:"微软雅黑"; }
+.tzjj img{
+	max-width: 100%;
+	min-width: 280px;
+}
+div.row.marginTop35.text-center img{
+	min-width: auto;
+}
+.tzjjSubmit{ width:100%; }
+
+/*侧边栏*/
+
+.sidebar-ul{padding-left:25px}
+
+.sidebar-ul a{ padding:13px; padding-left:30px; display:block; color:#2b2b2b; border-left:4px solid transparent; }
+
+.sidebar-ul a:hover{ text-decoration:none; background-color:#eeeeee; }
+
+.active a{ color:#75BD2A !important; border-left:4px solid #75BD2A !important; }
+
+
+
+.error{ color:red; display:none; }
+
+@media (min-width:767px){
+
+	.tl{text-align:left !important;}
+
+	.pt60{padding-top:60px}
+
+	.mt7{margin-top:7px;}
+
+}
+
+
+
+@media (max-width:767px){
+
+	.sidebar{display:none;}
+
+	.pt40{padding-top:40px}
+
+}
+
+@media (max-width:687px){
+
+	.floatNone{float:none}
+
+	.w100{width:100%}
+
+}
+
+.company-text p{ letter-spacing:1px; line-height:180%; }
+
+/*发展历史*/
+
+.history-year{ font-weight:bold; background: url('../images/history.png') no-repeat left center; padding-left:25px; padding-top:3px; margin-bottom:10px; display:block; }
+
+.history-ul{ position:relative; }
+
+.history-ul li p{ padding-left:25px; }
+
+.history-line{ position:absolute; border-left:3px solid #eee; left:23px; height:90%; z-index:-1; }
+
+.bold{font-weight:bold}
+
+/* 发展历史英文 */
+.history-ul_en li{ background:url('../images/history_en.png') no-repeat left top; min-height:90px; padding-left:20px; }
+.histroy-ul_en{ position:relative; }
+.history-line{ position:absolute; border-left:2px solid #fdc010; left:23px; height:95%; }
+@media (min-width:450px){
+	.history-ul_en li{ background-position:center top; }
+	.history-line{ left:50%; }
+	.history-ul_en li:nth-of-type(odd){ text-align:right; padding-right:52%; }
+	.history-ul_en li:nth-of-type(even){ padding-left:52%; }
+}

@@ -1,0 +1,11 @@
+@media (min-width:767px){
+	.tl{text-align:left !important;}
+}
+.register{ width:100%; }
+.error{ color:red; display:none; }
+.height42{height:42px}
+.yzmBox{ width:100%; }
+.yzm{ width:44.7% !important; border-radius:4px !important; }
+.yzmBox img{ cursor:pointer; width:28.3%; height:41px; margin:-0 10px 0 5px; }
+.paddingTop12{ padding-top:12px !important; }
+.registerSection{ font-family:"微软雅黑"; }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>EmpireChem - Locations &amp; Contacts</title>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/page.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/tzjj.css">
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/lxfs.css">
+</head>
+<body>
+<tc_include file="Public:nav_en" />
+<div class="tzjj container">
+	<ol class="breadcrumb borderRadius0 marginTop10">
+		<li><a href="{:U('portal/index/index_en')}">Home</a></li>
+		<li>Locations &amp; Contacts</li>
+	</ol>
+	<h1>Locations &amp; Contacts</h1>
+    <hr class="paddingBottom10">
+    <foreach name="contactimg" item="nb"><img style="width: 100%;" src="data/{$nb.imgsrc}"></foreach>
+    <foreach name="contactDatb" item="vb">
+    	<h4 class="marginTop20">{$vb.title}: </h4>
+    	<p>{$vb.address}</p>
+    </foreach>
+	<hr>
+	<div class="row paddingBottom60">
+		<foreach name="contactData" item="vo">
+		<div class="col-sm-4">
+			<ul class="lxwm-ul">
+				<li>{$vo.title}：</li>
+				<li>{$vo.name}</li>
+				<li><span data-int="{$vo.stateemail}">Email: <a href="mailto:{$vo.email}">{$vo.email}</a></span></li>
+				<li><span data-int="{$vo.statetele}">Telephone: {$vo.telephone}</span></li>
+				<li><span data-int="{$vo.statephone}">Mobile phone: {$vo.phone}</span></li>
+			</ul>
+		</div>
+		</foreach>
+	</div>
+</div>
+<tc_include file="Public:footer1_en" />
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 校园招聘</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/recruit.css">
+    <!-- <script src="__TMPL__Public/diye/js/recruit.js" type="text/javascript"></script> -->
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section>
+	<div class="banner bg">
+		<div class="container">
+			<h1>校园招聘</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<!--条件筛选-->
+				<div class="filter padding10 marginTop35">
+					<div class="row">
+						<div class="tr col-sm-2">
+							<p>关键字搜索</p>
+						</div>
+						<div class="col-sm-10">
+							<!--过滤搜索-->
+							<form method="post" action="{:U('portal/campusrecruit/campusrecruit')}" class="js-ajax-form form-inline clearfix">
+								<input type="text" id="keywords" name="keywords" class="filterSearch padding5 form-control" placeholder="关键字搜索">
+								<input type="submit" class="filterSubmit js-ajax-submit btn btn-warning" value="搜索">
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--招聘列表-->
+				<div class="text marginTop35">
+					<div class="table-responsive">
+						<table class="recruit-table table table-hover">
+							<thead>
+								<tr>
+									<td>职位名称</td>
+									<td>职位类别</td>
+									<td>工作地点</td>
+									<td>招聘人数</td>
+									<td>薪资</td>
+									<td>发布时间</td>
+								</tr>
+							</thead>
+							<tbody>
+								<foreach name="campusrecruitData" item="vo">
+								<tr data-toggle="modal" data-target="#ad{$vo.id}" >
+									<td>{$vo.name}</td>
+									<td>{$vo.model}</td>
+									<td>{$vo.origin}</td>
+									<td>{$vo.needs}</td>
+									<td>{$vo.pay}</td>
+									<td>{$vo.createtime}</td>
+								</tr>
+								</foreach>
+								<!-- <tr>
+									<td>前端工程师</td>
+									<td>技术</td>
+									<td>广州</td>
+									<td>1</td>
+									<td>2016-06-23</td>
+								</tr>
+								<tr>
+									<td>前端工程师</td>
+									<td>技术</td>
+									<td>广州</td>
+									<td>1</td>
+									<td>2016-06-23</td>
+								</tr>
+								<tr>
+									<td>前端工程师</td>
+									<td>技术</td>
+									<td>广州</td>
+									<td>1</td>
+									<td>2016-06-23</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<!--分页-->
+					<div class="xyzp text-center">
+						<ul class="pagination">
+							{$page}
+						</ul>
+					</div>
+				</div>
+				<!--点击出现职位弹框-->
+				<foreach name="campusrecruitData" item="co">
+					<div class="modal fade" id="ad{$co.id}">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden=rue">&times;</span><span class="sr-only">Close</span></button>
+									<h4 class="modal-title">{$co.name}</h4>
+								</div>
+								<div class="modal-body">
+									<div class="row paddingTop10">
+										<div class="col-sm-6 paddingBottom10">职位类别：{$co.model}</div>
+										<div class="col-sm-6 paddingBottom10">工作地点：{$co.origin}</div>
+										<div class="col-sm-6 paddingBottom10">发布时间：{$co.createtime}</div>
+										<div class="col-sm-6 paddingBottom10">薪　　资：{$co.pay}</div>
+									</div>
+									<h2>职责:</h2>
+									<p>{$co.responsibilities}</p>
+									<h2>要求:</h2>
+									<p>{$co.require}</p>
+								</div>
+								<div class="modal-footer">
+									<form action="{:U('portal/Recurit/add_recurit')}" method="POST" class="text-left" enctype="multipart/form-data">
+										<input type="hidden" name="id" value="{$co.id}" />
+										<div class="clearfix">
+											<label for="file" class="pull-left">简历资料：</label>
+											<input type="file" onchange="updateFiles(this)" name="file" required="" class="pull-left">
+										</div>
+										<p class="message">请将简历资料命好名并上传,只允许上传rar,zip,7z格式的文件</p>
+										<input type="submit" class="pull-right btn btn-warning" value="投递简历">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</foreach>
+			</div>
+			<div class="col-sm-2">
+				<ul class="jyzp-ul nav mt35 padding10">
+					<li><a href="{:U('portal/Joindiye/joinus')}">加入一佳</a></li>
+					<li><a href="{:U('portal/Zydevelopment/index')}">职业发展</a></li>
+					<li><a href="{:U('portal/Recurit/recurit')}">精英招聘</a></li>
+					<li><a href="{:U('portal/professional/index')}">专业人士</a></li>
+					<li><a class="xyzp-li" href="{:U('portal/Campusrecruit/campusrecruit')}">校园招聘</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

@@ -1,0 +1,42 @@
+.breadcrumb{ background-color:transparent; }
+.bg{ background-color:#f5f5f5; }
+@media (min-width:767px){
+	.tc{text-align:center}
+	.bg{ background: url('../images/productxx.jpg') no-repeat center; background-size:cover; }
+}
+.information,.basic{ background-color:white; padding:20px; border:1px solid #eeeeee; }
+.information img{width:100%;}
+.basic th{ text-align:right; width:23%; font-weight:normal; }
+.basic th:after{ content:':'; }
+.product-h1{ font-size:28px; font-family:"微软雅黑"; }
+@media (max-width:767px){
+	.product-h1{ font-size:24px; }
+	.information p{ font-size:12px !important; }
+}
+.productxx-title{ border-bottom:1px solid #ddd; }
+.basic h1{ display:inline-block; zoom:1; *display:inline; font-size:22px; border-left:4px solid #ffac19; margin:10px 0; padding:5px; padding-left:10px; }
+.shop .nav{ margin-bottom:10px; background-color:#ffab1a;}
+.shop .nav li{ float:left; margin-bottom:-8px; }
+.shop .nav li a{ font-size:16px; color:white; }
+.shop .nav li a:hover,.shop .nav .active a{ background-color:white; color:#ffab1a; position:relative; top:-8px; border-bottom:3px solid white; border-top:5px solid #ffab1a; }
+@media (max-width:767px){
+	.shop .nav li{ float:none; text-align:center; margin-bottom:0 !important; }
+	.shop .nav .active a{ position:static !important; border:0 !important; }
+}
+.xgcp li a{ padding-left:20px !important; }
+.breadcrumb{padding-left:0}
+.shop .tab-content .tab-pane p:first-child{ padding:5px 10px; background-color:#eeeeee; }
+/* 应用领域 */
+.application{ width:100%; border-left:1px solid #dddddd; border-top:1px solid #dddddd; }
+.application-title{ font-size:14px; margin:0; padding:10px; height:37px; border-bottom:1px solid #dddddd; border-right:1px solid #dddddd; }
+.application-ul li{ padding:10px; border-bottom:1px solid #dddddd; width:50%; float:left; border-right:1px solid #dddddd; }
+/*侧边栏*/
+.sidebar-section h1{ background-color:#ffac19; font-size:16px; padding:10px; color:white; }
+.sidebar-ul{ border:1px solid #eee; }
+.xgfa li{ padding:0px 10px; }
+.xgfa li a{ border-bottom:1px solid #eee; }
+.xgfa li:last-child a{ border-bottom:0; }
+@media (min-width:767px){}
+.sidebar-section ul li{ background-color:white; }
+.sidebar-section li a{  padding:10px; display:block; color:#323232; }
+.sidebar-section li a:hover,.xgfa li:hover{ text-decoration:none; background-color:#e4e4e4; }

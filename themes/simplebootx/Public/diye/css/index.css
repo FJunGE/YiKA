@@ -1,0 +1,201 @@
+/* 图片轮播 */
+.carousel-control.right,.carousel-control.left{ background-image:none !important; }
+#banner img{ height:295px; }
+.item-section{ position:absolute; left:17%; top:16%; color:white; }
+.item-title{ font-family:"微软雅黑"; }
+.item-section p{ word-break:break-word; }
+.carousel-btn{ border:1px solid white; display:inline-block; *zoom:1; *display:inline; transition:all 0.3s; -webkit-transition:all 0.3s; color:white; padding:12px 32px; border-radius:4px; }
+.carousel-btn:hover{ text-decoration:none !important; background-color:#f99724; color:white; border-color:transparent; }
+@media (min-width:768px){
+	#banner img{ height:404px; }
+	.item-section{ width:500px; }
+	.pt20{padding-top:20px;}
+	.pb20{padding-bottom:20px;}
+}
+@media (min-width:1025px){
+	#banner img{ height:536px; }
+}
+@media (max-width:767px){
+	.item-section{ top:8%; }
+	.item-title{ font-size:20px; }
+	.item-section p{ white-space:nowrap; text-overflow:ellipsis; word-break:break-all; width:230px; overflow:hidden; }
+	.carousel-btn{ background-color:#f99724; color:white; border-color:transparent;  }
+}
+.zhezhao{ position:absolute; left:0; top:0; background-color:rgba(0,0,0,0.2); width:100%; height:100%; }
+
+.glyphicon:before{padding-right:10px}
+.company-span{ color:#f99724; font-size:30px; }
+.section-company h2{ font-size:22px; }
+.section-title p{font-size:18px}
+.section-title:hover .company-text a{ color:#7f7f7f; }
+.section-title h1{ font-size:28px !important; }
+.section-company h2,.section-title a,.section-title p,.industry-img-content h2{ font-family:"微软雅黑"; transition:color 0.2s; -webkit-transition:color 0.2s; }
+.section-company a,.section-title a{ text-decoration:none !important; color:black; }
+.col-sm-4:hover h2,.section-title:hover h1 a,.industry-img-content:hover h2,.news-btn:hover{ color:#f99724 !important; }
+.col-sm-4 p{color:#7f7f7f;}
+@media (max-width:420px){
+	.nav-tabs{ border-bottom:none !important; }
+	.nav-tabs li{ float:none; }
+	.nav-tabs li a:hover,.nav-tabs .active a{ border:1px solid transparent !important; background-color:#eeeeee !important; }
+}
+.orange{color:#f99724}
+.company-title,.section-title h1{ font-family:"微软雅黑"; font-size:30px; }
+.company-text a{ font-size:16px !important; color:#7f7f7f; letter-spacing:1px; }
+@media (min-width:767px){
+	.mt60{margin-top:60px}
+}
+@media (max-width:767px){
+	.company-text a{font-size:12px !important}
+	.company-title,.section-title h1{font-size:26px}
+}
+.item img,.section-company img{width:100%}
+@media (min-width:767px){
+	.tab-content div:nth-of-type(2n) .feature div:nth-of-type(1){ float:right; }
+}
+.company-text p{ line-height:180%; margin-bottom:3px; font-size:13px; }
+
+/* 招聘 */
+.mr15{margin-right:15px;}
+.recruit h3{ color:#f99724; font:34px "微软雅黑"; }
+.recruit-btn{ padding:6px 20px; }
+@media (max-width:767px){
+	.recruit{ text-align:center; }
+}
+
+/* 解决方案 */
+.jjfa-text{ overflow: hidden; height: 62px; }
+.jjfa-text *{ background-color:inherit !important; }
+.section-industry .glyphicon:before{ padding-right:0; }
+.industry-btn{ background-color:#f2f2f2; color:#666666; padding:5px; font-size:24px; margin-top:-5px; cursor:pointer; }
+.industry-btn:hover{ background-color:#f99724; color:white; }
+@media (max-width:767px){
+	#industry .industry-img{ width:860%; }
+	#industry .industry-img-content{ width:11.5%; }
+}
+@media (min-width:768px){
+	.industry-img{ width:1460px; }
+	.industry-img-content{ width:171px; }
+	.industry-img img{ height:130px; }
+}
+@media (min-width:992px){
+	.industry-img{ width:1904px; }
+	.industry-img-content{ width:228px; }
+	.industry-img img{ height:173px; }
+}
+@media (min-width:1200px){
+	.industry-img{ width:2288px; }
+	.industry-img-content{ width:276px; }
+	.industry-img img{ height:210px; }
+}
+#news{ position:relative; }
+#news .industry-img-content h2{ font-size:24px; color:#333333; }
+#news .industry-article p{ color:#666666; }
+.news-btn{ position:absolute !important; top:50% !important; font-size:55px; cursor:pointer; opacity:0; transition:all 0.6s; -webkit-transition:all 0.6s; }
+#news:hover .news-btn{ opacity:1; }
+@media (max-width:767px){
+	.news-btn{ display:none; }
+	#news .industry-img{ overflow-y:scroll; overflow-x:hidden; height:350px; }
+}
+.news-btn-left{ left:-55px; }
+.news-btn-right{ right:-48px; }
+.industry-img a{ color:black; }
+.industry-img a:hover{ text-decoration:none !important; }
+.industry-content{ overflow:hidden; }
+.industry-img{ padding:20px 0; position:relative; }
+.industry-img-content{ float:left; margin-right:10px; }
+.industry-artile p{ font-size:12px; }
+.industry-article h2{ font-family:"黑体" !important; }
+.industry-img img{width:100%;}
+#industry .industry-img-content{ background-color:#f5f5f5; }
+#industry .industry-article h2{ font-size:20px; }
+#industry .industry-article p{ padding:0 10px; color:#666666; margin-bottom:0px; }
+
+/*
+	一佳 主页
+ */
+
+.product-wrap {
+	background-color: #f0f0f0;
+	margin-top: 40px;
+	padding-top: 40px;
+}
+
+.product-wrap .product-title {
+	margin: 5px 0 30px;
+	text-align: center;
+	color: #666666;
+  font-size: 32px;
+  font-family: "Microsoft YaHei";
+  letter-spacing: 2px;
+}
+
+.product-wrap .product-item:hover img {
+	transform: scale(1.1, 1.1);
+}
+
+.product-wrap .product-item {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.product-wrap img {
+	max-width: 100%;
+	min-height: 100%;
+	transition: transform 0.3s;
+}
+
+.product-wrap .product-pic {
+	width: 100%;
+	height: 130px;
+	overflow: hidden;
+}
+
+.product-wrap .big .product-pic {
+	height: 293px;
+}
+
+.product-wrap .product-item h3 {
+	padding: 10px 0;
+	letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+
+.product-wrap .product-desc {
+	color: #999;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+.product-wrap .product-item h3,
+.product-wrap .product-desc {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.product-wrap .big .product-desc {
+	height: 78px;
+	line-height: 1.6;
+	overflow: hidden;
+}
+
+.product-wrap .product-pic,
+.product-wrap .product-item h3,
+.product-wrap .product-desc {
+	background-color: #fff;
+	margin: 0;
+}
+
+.text-overflow {
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	word-break: break-all;
+	white-space: nowrap;
+}
+.bath-image{
+	display: inline-block;
+	border: 1px solid red;
+}

@@ -1,0 +1,100 @@
+<admintpl file="header" />
+</head>
+<style>
+	.num , .current{
+		border:1px solid #6CD6BC;
+		padding:6px;
+	}
+</style>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Picture/index')}">首页大图管理</a></li>
+			<li class="active"><a href="javascript:;">修改</a></li>
+		</ul>
+		<form class="js-ajax-form" action="{:U('Picture/edit_picture')}" method="post">
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="15">序号</th>
+						<th width="50">当前图片</th>
+						<th width="50">关联的文章</th>
+						<th width="80">更新图片</th>
+						<th width="70">更新关联文章</th>
+						<th width="50">状态</th>
+					</tr>
+				</thead>
+				<php>
+					$status=array("1"=>"已下架","2"=>"已上架");
+				</php>
+				
+				<tr>
+					<td>{$picdata.id}</td>
+					<td><img src="{$picdata.imgpath}"></td>
+					<td>{$picdata.posttitle}</td>
+					<td><input type="file" name="img"></td>
+					<td>
+						<select style="max-height: 100px;" name="postid">
+									<option value="-1">请选择...</option>
+									<foreach name="post" item="vo"> 
+										<option value="{$vo['id']}">{$vo['post_title']}</option>
+									</foreach>	
+						</select>
+					</td>
+					<td>
+						<lable><input type="radio" name="state" value="1" {$picdata['state'] == 1 ? checked : ""}> 显示 </lable><br/>
+						<lable><input type="radio" name="state" value="0" {$picdata['state'] == 0 ? checked : ""}> 隐藏  </lable>
+					</td>
+				</tr>
+				<input type="hidden" name="id" value="{$picdata.id}"/>
+			</table>
+			<button class="btn btn-primary js-ajax-submit" type="submit">更新</button>
+			<a class="btn" href="{:U('Picture/index')}">返回</a>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var str = 0;
+					var id = tag = '';
+					$("input[name='ids[]']").each(function() {
+						if ($(this).attr('checked')) {
+							str = 1;
+							id += tag + $(this).val();
+							tag = ',';
+						}
+					});
+					if (str == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					var $this = $(this);
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+						title : "批量移动",
+						width : "80%"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

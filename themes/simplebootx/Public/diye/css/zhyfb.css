@@ -1,0 +1,30 @@
+/*展会样式*/
+.bgn{background-color: #f0f0f0;}
+.zhCard{ padding:15px; margin-bottom:10px; }
+.zhCard h4{ font-size:20px; font-family:"黑体"; }
+.zhCard p{ color:#646464; padding-top:20px; padding-bottom:20px; }
+.more{ padding-left:15px; background:url("../images/morejt.png") no-repeat left center;}
+.more a{color:#e5a21d;}
+h4 a{ color:black; }
+.more a:hover,h4 a:hover{ color:#e5a21d; text-decoration:none; }
+.getMore{margin:20px;}
+.bt1{ border-top:1px solid #ccc; }
+.title{ font-size:30px; font-family:"微软雅黑"; }
+.xxtitle{ font-size:26px; font-family:"微软雅黑"; }
+.yqhtitle{ font-size:24px; font-family:"黑体"; }
+.breadcrumb{ background-color:white; padding-left:0; }
+.zhMore{ display:none; }
+@media (max-width:992px){
+	.bordertop1{ border-top:1px solid #ccc; }
+}
+@media (max-width:767px){
+	.xxtitle{ font-size:20px; }
+}
+.text-indent2{ text-indent:2em; }
+.xgnews ul{ list-style:disc; padding-left:15px;  }
+.xgnews a{ color:#666; }
+.zt img{ width:100%; margin-bottom:10px; }
+
+/*意见反馈样式*/
+.paddingLeft0{padding-left:0;}
+.paddingRight0{padding-right:0;}

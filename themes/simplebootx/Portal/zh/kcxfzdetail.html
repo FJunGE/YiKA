@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 可持续发展</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/kcxfz.css">
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section class="fm">
+	<div class="container kcxfz-title">
+		<ol class="breadcrumb marginBottom0 borderRadius0">
+			<li><a href="index.php?g=portal&m=index&a=index">首页</a></li>
+			<li><a href="{:U('portal/Kcxdevelopment/kcxdevelopment')}">可持续发展</a></li>
+			<li>共同进步</li>
+		</ol>
+		<div class="row">
+			<foreach name="data" item="vc">
+			<div class="col-sm-8 kcxfzxx">
+				<h1>{$vc.title}</h1>
+				<h3>关于{$vc.title}</h3>
+				<p>{$vc.content}</p>
+				<p><a href="{:U('portal/Kcxdevelopment/kcxdevelopment')}" class="text-success">返回可持续发展>></a></p>
+			</div>
+			<div class="kcxfz-img col-sm-4">
+				<img src="data/{$vc.file}" alt="">
+			</div>
+			</foreach>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

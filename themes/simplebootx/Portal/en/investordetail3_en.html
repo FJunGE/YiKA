@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	
+	<title>EmpireChem - {$prodata.title}</title>
+	<!--bootstrap-->
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/newsxx.css">
+	
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav_en" />
+<!--内容-->
+<div class="newsCon container">
+	<php>
+		$urls=array("1"=>"{:U('portal/Investor/investor1')}","2"=>"{:U('portal/Investor/investor2')}","3"=>"{:U('portal/Investor/investor3')}","4"=>"{:U('portal/Investor/investor4')}");
+		$types=array("1"=>"Temporary Announcement","2"=>"Periodical Publication","3"=>"Financial Information","4"=>"Company Charter");
+	</php>
+	<ol class="breadcrumb borderRadius0 marginTop10">
+		<li><a href="index.php?g=portal&m=index&a=index">Home</a></li>
+			<li><a href="{:U('portal/investor/investor')}">Investors Relations &amp; Finance</a></li>
+		
+			<li><a id="classify" href="index.php?g=portal&m=Investor&a=investorclass3">{$types[$prodata['type']]}</a></li>
+		
+		
+		<li class="active">{$prodata.title}</li>	
+	</ol>
+	<div class="row">
+		<h1>{$prodata.title}</h1>
+		<!--新闻内容-->
+		<div class="newsSection paddingBottom60">
+			<span class="time borderC">{$prodata.createtime}</span>
+			<p>{$prodata.content}</p>
+		</div>
+	</div>
+</div>
+<!--页脚-->
+<tc_include file="Public:footer1_en" />
+</body>
+</html>

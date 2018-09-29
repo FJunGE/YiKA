@@ -1,0 +1,33 @@
+section p{ line-height:200%; }
+section h1{ font-size:30px; font-family:"微软雅黑"; }
+.content-title{ color:white; background:url('../images/investor.jpg') no-repeat; background-size:cover; }
+.content-title h1{ font-size:30px; }
+.content-title a{ color:inherit; }
+@media (min-width:1367px){
+	.content-title{ height:420px; padding-top:65px; }
+	.content-title h1{ font-size:40px; }
+}
+.tzzgx-tabs .nav{ background-color:#f6761f; }
+.tzzgx-tabs .nav a{ color:white; font:16px "微软雅黑"; }
+.tzzgx-tabs .nav a:hover{ background-color:#f04821; }
+.tzzgx-tabs .nav li{ width:25%; float:left; text-align:center; }
+.tab-pane-ul li{ margin-bottom:10px; padding-top:5px; padding-bottom:5px; border-bottom:1px solid #eee; background: url('../images/investorIcon.png') no-repeat left center; padding-left:15px; }
+.tab-pane-ul{ color:#333; }
+.tab-pane-ul a{ color:inherit; }
+.tab-pane-ul li:last-child{ border-bottom:none; }
+.tzzgx-tabs li.active a{ background-color:#f04821; }
+@media (max-width:767px){
+	.tzzgx-tabs li{ font-size:12px; }
+	.tzzgx-tabs .nav li a{ padding:10px 5px; font-size:inherit; }
+	section h1{ font-size:22px; }
+	section p{ font-size:12px; }
+}
+/* 投资者相关信息 */
+.paddingLeft0{ padding-left:0; }
+.content{ background-color:white; padding:20px; }
+.inClassTitle{ border-left:5px solid #f1512c; padding-left:10px; }
+.inClassSidebar-ul{ padding-right:20px; }
+.inClassSidebar-ul li{ border-bottom:1px dashed #f1512c; padding:10px; }
+.inClassSidebar-ul li.active{ background-color:#f1512c; color:white; }
+.inClassSidebar-ul li.active a{ color:inherit; }
+.inClassSidebar-ul li a{ color:#666; display:block; padding:0 5px; }

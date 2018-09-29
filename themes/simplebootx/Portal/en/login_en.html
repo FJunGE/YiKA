@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>EmpireChem - Login</title>
+	<!--bootstrap-->
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">    
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/login.css">
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav_en" />
+<!--内容-->
+<div class="container">
+	<div class="loginSection paddingTop10">
+		<form class="loginForm js-ajax-form" action="{:U('portal/user/checkuser_en')}" method="post">
+		<h1 class="text-center marginTop15 marginBottom20 paddingBottom10">Login</h1>
+		<div class="input-group marginBottom40">
+			<span class="input-group-addon glyphicon top0 glyphicon-user"></span>
+			<input type="text" required="" class="height42 form-control" placeholder="Account" name="name">
+		</div>
+		<div class="input-group">
+			<span class="input-group-addon glyphicon top0 glyphicon-off"></span>
+			<input type="password" required="" class="height42 form-control" placeholder="Password" name="pass">
+		</div>
+		<div class="renumberPw clearfix">
+		</div>
+		<div class="yzmBox input-group marginBottom20">
+			<input type="text" required="" class="yzm form-control height42" name="verify" placeholder="Authenticode" style="width:232px;">
+			{:sp_verifycode_img('length=4&font_size=14&width=120&height=34&charset=1234567890&use_noise=1&use_curve=0')}
+		</div>
+		<div class="input-group w100">
+			<input type="submit" class="btn btn-warning js-ajax-submit" value="Login">
+			<a href="{:U('portal/user/register_en')}" class="btn btn-default pull-right">Register</a>
+		</div>
+	</form>
+	</div>
+	<!--页脚-->
+	<hr>
+	<p class="text-center">Copyright &copy; 2016 EmpireChem. All Rights Reserved.</p>
+</div>
+</body>
+</html>

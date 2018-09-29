@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 公司章程</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/news.css">
+    <link rel="stylesheet" href="__TMPL__Public/diye/css/tzzgx.css">
+    <Script type="text/javascript">
+    function duihua()
+    {
+   	 alert("抱歉没权限访问！查看该内容需登录！")
+    }
+    </Script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<section class="bg">
+	<div class="container">
+		<ol class="breadcrumb borderRadius0 marginTop10 paddingLeft0">
+			<li><a href="index.php?g=portal&m=index&a=index">首页</a></li>
+			<li><a href="{:U('portal/investor/investor')}">投资者关系与财务信息</a></li>
+			<li class="active">公司章程</li>	
+		</ol>
+		<h1 class="inClassTitle marginBottom20">公司章程</h1>
+	</div>
+	<div class="content marginBottom20">
+	<div class="container">
+		<div class="row">
+			<div class="inClassSection col-sm-9">
+				<!-- 内容 -->
+				<ul class="tab-pane-ul marginBottom20">
+					<?php if(session('user_login') != null){ ?>
+					<foreach name="investorclass4" item="vo">
+						<li>
+							<span class="li-time pull-right">{$vo.createtime}</span>
+							<a href="{:U('Investor/investordetail4',array('id'=>$vo['id']))}">{$vo.title}</a>
+						</li>
+					</foreach>
+				<?php }else{ ?>
+					<foreach name="investorclass4" item="co">
+						<li>
+							<span class="li-time pull-right">{$co.createtime}</span>
+							<a href="javascript:;" onclick="duihua()">{$co.title}</a>
+						</li>
+					</foreach>
+				<?php }?>
+				</ul>
+				<!--分页-->
+				<div class="xyzp text-center">
+					<ul class="pagination"> 
+						{$page}
+					</ul>
+				</div>
+			</div>
+			<!--侧边栏-->
+			<div class="col-sm-3">
+				<ul class="inClassSidebar-ul text-center">
+					<li><a href="{:U('portal/Investor/investorclass1')}">临时公告</a></li>
+					<li><a href="{:U('portal/Investor/investorclass2')}">定期公示</a></li>
+					<li><a href="{:U('portal/Investor/investorclass3')}">财务信息</a></li>
+					<li class="active"><a href="{:U('portal/Investor/investorclass4')}">公司章程</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

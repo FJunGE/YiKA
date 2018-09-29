@@ -1,0 +1,80 @@
+<admintpl file="header" />
+</head>
+<body class="J_scroll_fixed">
+	<input type="text" value="{$time}" style="display:none;">
+	<div class="wrap jj">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Plan/index')}">工程案例管理</a></li>
+			<li class="active"><a href="javascript:;">新增案例</a></li>
+		</ul>
+		<div class="common-form">
+			<form method="post" class="form-horizontal" action="{:U('Plan/add_plan')}" enctype="multipart/form-data" 
+			method="post" onsubmit="return checkFiles()">
+				<table border="1">
+						<tr>
+							<th width="80">关联产品</th>
+							<td>
+								<select multiple="multiple" style="height:250px" name="proid[]" required="required">
+									<foreach name="prodata" item="vo"> 
+										<option value="{$vo['id']}">{$vo['name']}</option>
+									</foreach>	
+								</select>
+								<div>windows：按住 Ctrl 按钮来选择多个选项,Mac：按住 command 按钮来选择多个选项</div>
+							</td>
+						</tr>
+						<tr>
+							<th>标题</th>
+							<td><input type="text" name="title"></td>
+						</tr>
+						<tr>
+							<th>状态</th>
+							<td>
+								<lable><input type="radio" name="state" value="1" checked="checked"> 发布 </lable>&nbsp;&nbsp;&nbsp;&nbsp;
+								<lable><input type="radio" name="state" value="0"> 不发布  </lable>	
+							</td>
+						</tr>
+						<tr>
+							<th>工程案例内容描述</th>
+							<td>
+								<script type="text/plain" id="plan_content" name="plan_content"></script>
+							</td>
+						</tr>
+
+						<tr>
+							<th>案例图</th>
+							<td>
+								<input type="file" name="pic[]" multiple="multiple">
+								<span>格式限制：jpg，jpeg，png，gif</span>
+								<div>windows：按住 Ctrl 按钮来选择多个选项,Mac：按住 command 按钮来选择多个选项</div>
+							</td>
+						</tr>
+					
+					<tr>
+						<th></th>
+						<td ><input type="submit" class="btn btn-primary J_ajax_submit_btn"  value="提交"/></td>
+					</tr>
+				</table>
+					<div class="uploaded_avatar_area">
+						<div id="cmi" class="uploaded_avatar_btns">
+							
+							
+							
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+	<script src="__ROOT__/statics/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.min.js"></script>
+</body>
+<script type="text/javascript">
+	editorcontent = new baidu.editor.ui.Editor();
+	editorcontent.render('pro_content');
+	
+
+	editorcontent1 = new baidu.editor.ui.Editor();
+	editorcontent1.render('plan_content');
+	
+</script>
+</html>

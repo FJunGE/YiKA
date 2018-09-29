@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE]>
+		<script src="../js/html5shiv.min.js"></script>
+		<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/index.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/index.js" type="text/javascript"></script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--图片轮播-->
+<div>
+	<div class="carousel slide" id="banner" data-ride="carousel">
+		<!--轮播列表-->
+		<ol class="carousel-indicators">
+			<?php if($picdata[0]['state'] == 1){?>
+				<li data-slide-to="0" class="active" data-target="#banner"></li>
+			<?php }?>
+			
+			<?php if($picdata[1]['state'] == 1){?>
+				<li data-slide-to="1" data-target="#banner"></li>
+			<?php }?>
+			
+			<?php if($picdata[2]['state'] == 1){?>
+				<li data-slide-to="2" data-target="#banner"></li>
+			<?php }?>
+			
+		</ol>
+		<!--轮播图片-->
+		<div class="carousel-inner">
+			<?php if($picdata[0]['state'] == 1){?>
+			<div class="item active">
+				<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[0]['postid']}"></a>
+				<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[0]['postid']}" target="_blank"><span class="zhezhao"></span><img src="{$picdata[0]['imgpath']}" alt=""></a>
+				<div class="item-section">
+					<h1 class="item-title">{$picdata[0]['post_title']}</h1>
+					<p class="pt20 pb20">{$picdata[0]['post_excerpt']}</p>
+					<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[0]['postid']}" class="carousel-btn">了解详情</a>
+				</div>
+			</div>
+			<?php }?>
+			
+			<?php if($picdata[1]['state'] == 1){?>
+			<div class="item">
+				<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[1]['postid']}"></a>
+				<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[1]['postid']}" target="_blank"><span class="zhezhao"></span><img src="{$picdata[1]['imgpath']}" alt=""></a>
+				<div class="item-section">
+					<h1 class="item-title">{$picdata[1]['post_title']}</h1>
+					<p class="pt20 pb20">{$picdata[1]['post_excerpt']}</p>
+					<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[1]['postid']}" class="carousel-btn">了解详情</a>
+				</div>
+			</div>
+			<?php }?>
+			
+			<?php if($picdata[2]['state'] == 1){?>
+			<div class="item">
+				<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[2]['postid']}"></a>
+				<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[2]['postid']}" target="_blank"><span class="zhezhao"></span><img src="{$picdata[2]['imgpath']}" alt=""></a>
+				<div class="item-section">
+					<h1 class="item-title">{$picdata[2]['post_title']}</h1>
+					<p class="pt20 pb20">{$picdata[2]['post_excerpt']}</p>
+					<a href="/index.php?g=portal&m=Article&a=index&id={$picdata[2]['postid']}" class="carousel-btn">了解详情</a>
+				</div>
+			</div>
+			<?php }?>
+			
+		</div>
+		<!--上下翻页按钮-->
+		<a href="#banner" class="carousel-control left" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a href="#banner" class="carousel-control right" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+</div>
+
+<!--内容-->
+<section>
+	<div class="container">
+		<div class="section-company">
+			<div class="row padding10 mt60 marginBottom25">
+				<foreach name="companyDate" item="vo">
+				<div class="fn col-sm-6 w100">
+					<div class="section-title">
+						<h1 class="company-title marginTop60 marginBottom20"><a href="{:U('portal/Company/company')}">快速了解<span class="orange">一佳门窗</span></a></h1>
+						<p class="company-text"><a href="{:U('portal/Company/company')}">{$vo.abstract}</a></p>
+					</div>
+				</div>
+				<div class="fn w100 col-sm-6">
+					<a href="{:U('portal/Company/company')}"><img src="data{$vo['imgpath']}" alt=""></a>
+				</div>
+				</foreach>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 marginTop10">
+					<a href="{:U('portal/Company/company')}">
+						<h2><span class="company-span glyphicon glyphicon-home"></span>公司介绍</h2>
+						<div class="company-text marginTop15">
+							<foreach name="companyDate" item="zi"><p>{$zi.title}</p></foreach>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-4 marginTop10">
+					<a href="{:U('portal/History/history')}">
+						<h2><span class="company-span glyphicon glyphicon-time"></span>发展历史</h2>
+						<div class="company-text marginTop15">
+							<foreach name="histdata" item="po"><p>{$po[content]}</p></foreach>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-4 marginTop10">
+					<a href="{:U('portal/Collaborate/index')}">
+						<h2><span class="company-span glyphicon glyphicon-yen"></span>投资基金</h2>
+						<div class="company-text marginTop15">
+							<foreach name="funds" item="fo"><p>{$fo.introduce}</p></foreach>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 产品列表 -->
+		<!-- <div class="product-wrap">
+			<h2 class="marginTop35 marginBottom20">一佳产品</h2>
+
+			<div class="row">
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54fd5aee57715.png"></a>
+					</div>
+					<h3 class="text-center">美式提拉窗系列</h3>
+					<p class="product-desc">上下双提拉窗是区别于传 统欧式门窗内外开和普通推拉模式的新型隔热铝合金窗，采用纯美式风格的...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f58101cfce6.jpg"></a>
+					</div>
+					<h3 class="text-center">美式内倾推拉窗系列</h3>
+					<p class="product-desc">内倒侧滑窗是区别于传统欧式门窗内外开和普通推拉模式的新型隔热铝合金窗，综合了推拉式门窗的灵...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f5811134cda.jpg"></a>
+					</div>
+					<h3 class="text-center">静佳系列  隔音窗</h3>
+					<p class="product-desc">您所希望的宁静空间可以通过堡屋门窗系统来实现，堡屋门窗系统选用的材料与精准的生产，安装工艺...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f5812231e46.jpg"></a>
+					</div>
+					<h3 class="text-center">融家系列  保温窗</h3>
+					<p class="product-desc">通常建筑物的门窗面积占外墙总面积的10-15%，但所散发的能量却超越了建筑总能耗的10%，...</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f58135da0a8.jpg"></a>
+					</div>
+					<h3 class="text-center">密家系列  密封窗</h3>
+					<p class="product-desc">堡屋门窗系统多重的压缩式密封，合理的节约设计， 精选的密封材料。在关闭状态下杜绝空气、雨水...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f582297436d.jpg"></a>
+					</div>
+					<h3 class="text-center">严仕系列  坚固窗</h3>
+					<p class="product-desc">堡屋严仕门窗 ， 拥有一流的材料可确保外形及功能经久不衰，能够承受各种气候状况或外力的入侵...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f582441c47a.jpg"></a>
+					</div>
+					<h3 class="text-center">卫仕系列  防盗窗</h3>
+					<p class="product-desc">家是安全的港湾，谁也不希望这个安全港受到不速之客的打扰。堡屋门窗在满足建筑物的功能性的前提...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f582678b45a.jpg"></a>
+					</div>
+					<h3 class="text-center">耐驰系列  全能窗</h3>
+					<p class="product-desc">坚固的窗体，集成各个子系统的优点，是一款经过严格的整合及实践的高质量、标准化的产品。此系统...</p>
+				</div>
+			</div>
+		</div> -->
+	<div class="product-wrap">
+		<div class="container">
+			<h2 class="product-title">一佳产品</h2>
+			<div class="text-right"><a href="{:U('portal/product/category')}">更多</a></div>
+			<div class="row marginBottom60">
+				<div class="product-item big col-sm-6">
+					<div class="product-pic">
+						<a href="{:U('product/productdetail',array('id'=>$product[0]['id']))}"><img src="data/{$product[0]['picpath']}" alt="{$product[0]['name']}"></a>
+					</div>
+					<h3 class="text-overflow">{$product[0]['name']}</h3>
+					<p class="product-desc">{$product[0]['features']}...</p>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="row">
+
+						<foreach name="product" key="k" item="p2">
+							<if condition="in_array($k, array(1,2,3,4))">
+							<div class="product-item marginBottom20 col-sm-6">
+								<div class="product-pic">
+									<a href="{:U('product/productdetail',array('id'=>$p2['id']))}"><img src="data/{$p2['picpath']}" alt="{$p2['name']}"></a>
+								</div>
+								<h3 class="text-overflow">{$p2['name']}</h3>
+								<p class="text-overflow product-desc">{$p2['features']}...</p>
+							</div>
+							</if>
+						</foreach>
+						<!--<div class="product-item marginBottom20 col-sm-6">
+							<div class="product-pic">
+								<a href=""><img src="http://www.baohau.com/Public/Uploads//54f5811134cda.jpg"></a>
+							</div>
+							<h3 class="text-overflow">静佳系列  隔音窗</h3>
+							<p class="product-desc text-overflow">您所希望的宁静空间可以通过堡屋门窗系统来实现，堡屋门窗系统选用的材料与精准的生产，安装工艺...</p>
+						</div>
+						<div class="product-item marginBottom20 col-sm-6">
+							<div class="product-pic">
+								<a href=""><img src="http://www.baohau.com/Public/Uploads//54f5811134cda.jpg"></a>
+							</div>
+							<h3 class="text-overflow">静佳系列  隔音窗</h3>
+							<p class="product-desc text-overflow">您所希望的宁静空间可以通过堡屋门窗系统来实现，堡屋门窗系统选用的材料与精准的生产，安装工艺...</p>
+						</div>
+						<div class="product-item marginBottom20 col-sm-6">
+							<div class="product-pic">
+								<a href=""><img src="http://www.baohau.com/Public/Uploads//54f5812231e46.jpg"></a>
+							</div>
+							<h3 class="text-overflow">融家系列  保温窗</h3>
+							<p class="product-desc text-overflow">通常建筑物的门窗面积占外墙总面积的10-15%，但所散发的能量却超越了建筑总能耗的10%，...</p>
+						</div>-->
+					</div>
+				</div>
+				<foreach name="product" item="p3" key="k">
+					<if condition="in_array($k,array(5,6,7,8))">
+						<div class="product-item col-sm-3">
+							<div class="product-pic">
+								<a href="{:U('product/productdetail',array('id'=>$p3['id']))}"><img src="data/{$p3['picpath']}" alt="{$p3['name']}"></a>
+							</div>
+							<h3 class="text-overflow">{$p3['name']}</h3>
+							<p class="product-desc text-overflow">{$p3['features']}...</p>
+						</div>
+					</if>
+				</foreach>
+				<!--<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f582297436d.jpg"></a>
+					</div>
+					<h3 class="text-overflow">严仕系列  坚固窗</h3>
+					<p class="product-desc text-overflow">堡屋严仕门窗 ， 拥有一流的材料可确保外形及功能经久不衰，能够承受各种气候状况或外力的入侵...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f582441c47a.jpg"></a>
+					</div>
+					<h3 class="text-overflow">卫仕系列  防盗窗</h3>
+					<p class="product-desc text-overflow">家是安全的港湾，谁也不希望这个安全港受到不速之客的打扰。堡屋门窗在满足建筑物的功能性的前提...</p>
+				</div>
+				<div class="product-item col-sm-3">
+					<div class="product-pic">
+						<a href=""><img src="http://www.baohau.com/Public/Uploads//54f582678b45a.jpg"></a>
+					</div>
+					<h3 class="text-overflow">耐驰系列  全能窗</h3>
+					<p class="product-desc text-overflow">坚固的窗体，集成各个子系统的优点，是一款经过严格的整合及实践的高质量、标准化的产品。此系统...</p>
+				</div>-->
+			</div>
+		</div>
+	</div>
+
+<style>
+	.news-wrap h2 {
+		color: #f99724;
+	}
+</style>
+
+	<div class="container">
+		<!-- 新闻中心 -->
+		<div class="news-wrap">
+			<h2 class="marginTop60 text-center marginBottom20" style="font-family: '微软雅黑'">新闻中心</h2>
+			<div id="news" class="section-industry">
+				<ul class="pull-right">
+					<li class="news-btn news-btn-left glyphicon glyphicon-menu-left"></li>
+					<li class="news-btn news-btn-right glyphicon glyphicon-menu-right"></li>
+				</ul>
+				<div class="industry-content">
+					<div class="industry-img clearfix">
+						<foreach name="information" item="vo">
+							<div class="industry-img-content">
+								<a href="index.php?g=portal&m=Article&a=index&id={$vo.id}">
+									<img src="{$vo['smeta']}" alt="">
+									<div class="industry-article">
+										<h2>{$vo.post_title}</h2>
+										<p>{$vo.post_excerpt}</p>
+									</div>
+								</a>
+							</div>
+						</foreach>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="marginBottom60">
+		<!-- 招聘信息 -->
+		<div class="recruit row marginBottom60">
+			<!-- 招聘信息 -->
+			<div class="col-sm-4">
+				<h3 class="marginBottom20">人才招聘</h3>
+				<div class="recruit-textBg clearfix">你或许可以在这里找到一门适合你的工作，并收获一个大家庭</div>
+				<div class="marginTop35 clearfix marginBottom20">
+					<a class="recruit-btn btn btn-warning mr15" href="{:U('portal/recurit/recurit')}">社会招聘</a>
+					<a class="recruit-btn btn btn-warning" href="{:U('portal/campusrecruit/campusrecruit')}">校园招聘</a>
+				</div>
+			</div>
+			<!-- 招聘表格 -->
+			<div class="col-sm-8">
+				<div class="col-sm-6">
+					<div class="table-responsive border0">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>社会招聘</th>
+									<th class="text-right"><a href="{:U('portal/recurit/recurit')}">更多</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<foreach name="newRecurit" item="ao" >
+									<tr data-toggle='modal' data-target='#avc{$ao.id}'>
+										<td>{$ao.name}</td>
+										<td class="text-right">
+											{$ao.createtime}
+										</td>
+									</tr>
+								</foreach>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="table-responsive border0">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>校园招聘</th>
+									<th class="text-right"><a href="{:U('portal/campusrecruit/campusrecruit')}">更多</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<foreach name="newCampusrecruit" item="no" >
+									<tr data-toggle='modal' data-target='#as{$no.id}'>
+										<td>{$no.name}</td>
+										<td class="text-right">
+											{$no.createtime}
+										</td>
+									</tr>
+								</foreach>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 弹窗 -->
+				<foreach name="newRecurit" item="ho">
+					<div class="modal fade" id="avc{$ho.id}">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</pan><span class="sr-only">Close</span></button>
+										<h4 class="modal-title">{$ho.name}</h4>
+									</div>
+									<div class="modal-body">
+										<div class="row paddingTop10">
+											<div class="col-sm-6 paddingBottom10">职位类别：{$ho.model}</div>
+											<div class="col-sm-6 paddingBottom10">工作地点：{$ho.origin}</div>
+											<div class="col-sm-6 paddingBottom10">发布时间：{$ho.createtime}</div>
+											<div class="col-sm-6 paddingBottom10">薪　　资：{$ho.pay}</div>
+										</div>
+										<h2>职责:</h2>
+										<p>{$ho.responsibilities}</p>
+										<h2>要求:</h2>
+										<p>{$ho.require}</p>
+									</div>
+									<div class="modal-footer">
+										<form action="{:U('portal/Recurit/add_recurit')}" method="POST" class="text-left" enctype="multipart/form-data">
+											<input type="hidden" name="id" value="{$ho.id}" />
+											<div class="clearfix">
+												<label for="file" class="pull-left">简历资料：</label>
+												<input type="file" onchange="updateFiles(this)" name="file" required="" class="pull-left">
+											</div>
+											<p class="message">请将简历资料命好名并上传,只允许上传rar,zip,7z格式的文件</p>
+											<input type="submit" class="pull-right btn btn-warning" value="投递简历">
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</foreach>
+				<!-- 弹窗2 -->
+				<foreach name="newCampusrecruit" item="ko">
+					<div class="modal fade" id="as{$ko.id}">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</pan><span class="sr-only">Close</span></button>
+										<h4 class="modal-title">{$ko.name}</h4>
+									</div>
+									<div class="modal-body">
+										<div class="row paddingTop10">
+											<div class="col-sm-6 paddingBottom10">职位类别：{$ko.model}</div>
+											<div class="col-sm-6 paddingBottom10">工作地点：{$ko.origin}</div>
+											<div class="col-sm-6 paddingBottom10">发布时间：{$ko.createtime}</div>
+											<div class="col-sm-6 paddingBottom10">薪　　资：{$ko.pay}</div>
+										</div>
+										<h2>职责:</h2>
+										<p>{$ko.responsibilities}</p>
+										<h2>要求:</h2>
+										<p>{$ko.require}</p>
+									</div>
+									<div class="modal-footer">
+										<form action="{:U('portal/Recurit/add_recurit')}" method="POST" class="text-left" enctype="multipart/form-data">
+											<input type="hidden" name="id" value="{$ko.id}" />
+											<div class="clearfix">
+												<label for="file" class="pull-left">简历资料：</label>
+												<input type="file" onchange="updateFiles(this)" name="file" required="" class="pull-left">
+											</div>
+											<p class="message">请将简历资料命好名并上传,只允许上传rar,zip,7z格式的文件</p>
+											<input type="submit" class="pull-right btn btn-warning" value="投递简历">
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</foreach>
+			</div>
+		</div>
+	</div>
+</section>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>

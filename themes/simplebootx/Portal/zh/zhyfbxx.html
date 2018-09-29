@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--IE采用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--让双核浏览器默认选择 WebKit 内核渲染-->
+	<meta name="renderer" content="webkit">
+	<!--禁止百度转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--[if IE 9]>
+		<script src="__TMPL__Public/diye/js/html5shiv.min.js"></script>
+		<script src="__TMPL__Public/diye/js/respond.min.js"></script>
+	<![endif]-->
+	<title>一佳门窗 - 展会与发布</title>
+	<!--bootstrap-->
+	<link rel="Shortcut Icon" href="__TMPL__Public/diye/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/bootstrap.css">
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/base.css">
+	<script src="__TMPL__Public/diye/js/jquery.min.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/bootstrap.js" type="text/javascript"></script>
+    <script src="__TMPL__Public/diye/js/base.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="__TMPL__Public/diye/css/zhyfb.css">
+	<script src="__TMPL__Public/diye/js/zhyfb.js" type="text/javascript"></script>
+</head>
+<body>
+<!--页头-->
+<tc_include file="Public:nav" />
+<!--内容-->
+<div class="container paddingBottom60">
+	<ol class="breadcrumb marginTop10">
+		<li><a href="{:U('portal/index/index')}">首页</a></li>
+		<li><a href="{:U('portal/expo/index')}">展会活动</a></li>
+		<li class="active">{$expo.title}</a></li>
+	</ol>
+	<h1 class="xxtitle">{$expo.title}</h1>
+	<hr>
+	<div class="yqh">
+		<h2 class="yqhtitle text-center">邀请函</h2>
+		{$expo.content}
+	</div>
+	<div class="xgnews">
+		<h2 class="yqhtitle">相关新闻</h2>
+		<ul>
+			<foreach name="news" item="vo">
+				<li><a href="{:U('portal/Article/index',array('id' => $vo['id']))}">{$vo.post_title}</a></li>
+			</foreach>
+		</ul>
+	</div>
+	<div class="zt">
+		<h2 class="yqhtitle">展台图片</h2>
+		<div class="row">
+			<foreach name="picdata" item="vo">
+			<div class="col-sm-4"><img src="data/{$vo.picpath}" alt=""></div>
+			</foreach>
+		</div>
+	</div>
+</div>
+<!--页脚-->
+<tc_include file="Public:footer1" />
+</body>
+</html>
